@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'HomePage',
+    'about',
+    'blog',
+    'contact',
+    
 ]
 
 MIDDLEWARE = [
@@ -52,7 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProjectOne.urls'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(BASE_DIR)
+#print(BASE_DIR)
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

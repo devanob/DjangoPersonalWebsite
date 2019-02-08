@@ -1,3 +1,5 @@
+
+
 """ProjectOne URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,15 +18,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from .views import redirectHome
-##HomePage 
-from HomePage.urls import urlpatterns as HomeURL
-from about.urls  import urlpatterns as aboutURL
+from .views import HomePage
 #Organizer Urls
+##
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path(r'', redirectHome ),
-    path(r'home/', include( HomeURL) ),
-    path(r'about/', include(aboutURL) ),
-
+    path(r'', HomePage.as_view(), name = "home")
 ]
+
+
+
+
