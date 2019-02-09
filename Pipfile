@@ -1,17 +1,13 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
+
+[dev-packages]
 
 [packages]
 django = "*"
-mysqlclient = "*"
-channels = "*"
 gunicorn = "*"
-uwsgi = "*"
-
-[dev-packages]
-pylint = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.6"
