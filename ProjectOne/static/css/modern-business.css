@@ -6,11 +6,10 @@
 
 body {
   padding-top: 54px;
-  background-image: url("https://wallpaperspit.com/wp-content/uploads/2017/11/Boat-HD-Nature-Wallpapers-1080p-940x529.jpg");
-   opacity:0.5;
+  /*background-image: url("https://wallpaperspit.com/wp-content/uploads/2017/11/Boat-HD-Nature-Wallpapers-1080p-940x529.jpg");*/
   }
 
-}
+
 
 @media (min-width: 992px) {
   body {
