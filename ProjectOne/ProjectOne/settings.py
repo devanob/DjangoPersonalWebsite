@@ -25,7 +25,7 @@ SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["35.243.251.42"]
+ALLOWED_HOSTS = ["35.243.251.42","devano.tk"]
 
 STATIC_URL = '/static/'
 

@@ -13,9 +13,10 @@
       Devano's Personal-
       {% endblock %}
     </title>
-
+    
     <!-- Bootstrap core CSS -->
     {% load staticfiles %}
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}"/>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -29,7 +30,7 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand btn-dark " href="{% url 'home' %}">Devano's Personal Website</a> <!---Header Funciton-->
+        <a class="navbar-brand btn-dark js-scroll-trigger" href="#page-top">Devano's Personal Website</a> <!---Header Funciton-->
 
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,17 +38,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link btn btn-dark " href="{% url 'about' %}">About</a>
+              <a class="nav-link btn btn-dark js-scroll-trigger " href="#aboutPage">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-dark " href="{% url 'about' %}">Resume</a>
-              </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-dark js-scroll-trigger" href="#content">Contact</a>
+                <a class="nav-link btn btn-dark js-scroll-trigger" href="#projectSection">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link btn btn-dark " href="{% url 'about' %}">Projects</a>
+                <a class="nav-link btn btn-dark " href="#">Resume</a>
               </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-dark js-scroll-trigger" href="#contactPage">Contact</a>
+            </li>
+           
             <li class="nav-item dropdown"> <!--Blog Header Here-->
               <a class="nav-link dropdown-toggle btn btn-dark" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
@@ -74,12 +76,13 @@
     <!-- /.container -->
 
     <!-- Footer -->
+    <!---<section class = "sectionPage"  >
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Devano Brown 2019</p>
       </div>
-      <!-- /.container -->
     </footer>
+    </section >-->
 
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

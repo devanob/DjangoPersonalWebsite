@@ -30,3 +30,34 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+.sectionPage {
+
+  border:3px solid rgb(158, 149, 149);
+  padding-bottom: 5%;
+  width: 100vw;
+  min-height: 100vh;
+  
+  
+}
+
+.carousel-item{
+
+  width: 100vw;
+  height: 90vh;
+
+  
+}
+
+.textOverlay{
+  
+    color:#fff;
+    position:absolute;
+    z-index:12;
+    top:50%;
+    left:0;
+    width:100%;
+    text-align:center;
+  
+  
+}
