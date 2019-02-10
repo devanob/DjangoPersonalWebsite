@@ -54,7 +54,7 @@
 
 {% block content %}
 <div class = "textOverlay">
-  <h1>Welcome All,</h1>
+  <h1>Welcome All</h1>
 </div>
 <section class = "sectionPage" id = "aboutPage" >
       <div class="container">
@@ -66,7 +66,7 @@
         
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="{% url 'home'%}">Home</a>
+              <a href="#page-top" class = "js-scroll-trigger">Home</a>
             </li>
             <li class="breadcrumb-item active">About</li>
           </ol>
@@ -95,17 +95,17 @@
       
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#top-page">Home</a>
+            <a href="#page-top" class = "js-scroll-trigger">Home</a>
           </li>
           <li class="breadcrumb-item active">Projects</li>
         </ol>
       <div class="row">
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="https://github.com/devanob/DjangoPersonalWebsite"><img class="card-img-top" src="{% static '/img/djangoLogo.png' %}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project One</a>
+                  <a href="https://github.com/devanob/DjangoPersonalWebsite" >Django Web Project (Ongoing)</a>
                 </h4>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
               </div>
@@ -113,10 +113,11 @@
           </div>
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+
+              <a href="https://github.com/devanob/A.I-Search-"><img class="card-img-top" src="{% static '/img/AI.png' %}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Two</a>
+                  <a href="https://github.com/devanob/A.I-Search-">A.I: Search Algorithm </a>
                 </h4>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
               </div>
@@ -124,10 +125,10 @@
           </div>
           <div class="col-lg-4 col-sm-6 portfolio-item">
             <div class="card h-100">
-              <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+              <a href="https://github.com/devanob/ThreadPool"><img class="card-img-top" src="{% static '/img/threadpool.png' %}" alt=""></a>
               <div class="card-body">
                 <h4 class="card-title">
-                  <a href="#">Project Three</a>
+                  <a href="https://github.com/devanob/ThreadPool">Project Three</a>
                 </h4>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
               </div>
@@ -153,7 +154,7 @@
     
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="index.html">Home</a>
+              <a href="#page-top" class = "js-scroll-trigger">Home</a>
             </li>
             <li class="breadcrumb-item active">Contact</li>
           </ol>
