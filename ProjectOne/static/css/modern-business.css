@@ -33,7 +33,7 @@ body {
 
 .sectionPage {
 
-  border:3px solid rgb(158, 149, 149);
+  
   padding-bottom: 5%;
   width: 100vw;
   min-height: 100vh;
@@ -61,3 +61,14 @@ body {
   
   
 }
+
+.card-img-top {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  }
+  
+  #projectSection, #headerSection {
+    
+    background-color: rgba(236, 170, 170, 0.1);
+  }
