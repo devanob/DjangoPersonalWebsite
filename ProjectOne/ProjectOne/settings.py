@@ -26,7 +26,7 @@ SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["35.243.251.42","devano.tk"]
+ALLOWED_HOSTS = ["*"]
 
 STATIC_URL = '/static/'
 
@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'MAINSITE',
         'USER': 'MYPROJECTS',
-        'PASSWORD': 'password'
+        'PASSWORD': '1101110113devanobrown'
     }
 }
 

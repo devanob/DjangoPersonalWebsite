@@ -34,7 +34,7 @@ body {
 .sectionPage {
 
   
-  padding-bottom: 5%;
+  padding-bottom: 10%;
   width: 100vw;
   min-height: 100vh;
   
@@ -72,4 +72,13 @@ body {
     
     background-color: rgba(236, 170, 170, 0.1);
   }
+
+
+  .carousel-caption {
+    opacity: 0.80;
+    max-width: 100%;
+    width:100%;
+    background-color: #4286d4;
+    left: 0;
+}
  

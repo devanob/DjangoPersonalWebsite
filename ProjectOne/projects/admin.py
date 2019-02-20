@@ -11,7 +11,7 @@ class projectAdminForm(forms.ModelForm):
 
 class projectAdmin(admin.ModelAdmin):
     form = projectAdminForm
-    list_display = ['project_name', 'slug', 'created', 'last_updated','img_link', 'description','project_link',]
+    list_display = ['projectName', 'slug', 'created', 'last_updated','imglink', 'description','project_link',]
     readonly_fields =  ['created', 'last_updated',]
 
 admin.site.register(Project, projectAdmin)

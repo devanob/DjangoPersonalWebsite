@@ -18,11 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from .views import HomePage
+from .views import HomePageView
 #Organizer Urls
 ##
 urlpatterns = [
-    path(r'', HomePage.as_view(), name = "home")
+    path(r'', HomePageView.as_view(), name = "home")
 ]
 
 

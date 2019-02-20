@@ -17,12 +17,12 @@
         <div class="carousel-inner" role="listbox">
          
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url({% static 'img/punk.jpg' %})">
-            <a href="">
+          <div class="carousel-item active" style="background-image: url({{latest_project.get_img}}) ">
+            <a href="{{latest_project.project_link}}">
               <div class="carousel-caption d-none d-md-block ">
 
-                  <h1>Current Project</h1>
-                  <p>This is a description of the project.</p>
+                  <h1>{{latest_project.projectName}}</h1>
+                  <h4>{{latest_project.description|truncatewords:"10"}}</h4>
             
               </div>
             </a>
@@ -56,8 +56,7 @@
 
 {% block content %}
 <div class = "textOverlay">
-  <h1>Welcome All</h1>
-  <p>Here YOu Will Find All My Content</p>
+  <h1>Welcome All...</h1>
 </div>
 <section class = "sectionPage" id = "aboutPage" >
       <div class="container">
@@ -77,7 +76,7 @@
           <!-- Intro Content -->
           <div class="row">
             <div class="col-lg-6">
-              <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+              <img class="img-fluid rounded mb-4" src="{% static '/img/AboutMe/DevanoBrown.jpg' %}" alt="">
             </div>
             <div class="col-lg-6">
               <h2>About My Personal Site PersonalSite</h2>
@@ -103,40 +102,23 @@
           <li class="breadcrumb-item active">Projects</li>
         </ol>
       <div class="row">
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://github.com/devanob/DjangoPersonalWebsite"><img class="card-img-top" src="{% static '/img/djangoLogo.png' %}" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://github.com/devanob/DjangoPersonalWebsite" >Django Web Project (UPDATED)</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+        
+            {% for project in Projects %}
+            
+            <div class="col-lg-4 col-sm-6 portfolio-item">
+              <div class="card h-100">
+                <a href="{{ project.project_link }}">
+                  <img class="card-img-top" src="{{ project.get_img }}" alt=""></a>
+                <div class="card-body">
+                  <h4 class="card-title">
+                    <a href="{{ project.project_link }}" >{{project.projectName}} </a>
+                  </h4>
+                  <p class="card-text"?> {{ project.description|truncatewords:"25" }}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-
-              <a href="https://github.com/devanob/A.I-Search-"><img class="card-img-top" src="{% static '/img/AI.png' %}" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://github.com/devanob/A.I-Search-">A.I: Search Algorithm (UPDATED) </a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-sm-6 portfolio-item">
-            <div class="card h-100">
-              <a href="https://github.com/devanob/ThreadPool"><img class="card-img-top" src="{% static '/img/threadpool.png' %}" alt=""></a>
-              <div class="card-body">
-                <h4 class="card-title">
-                  <a href="https://github.com/devanob/ThreadPool">ThreadPool C++</a>
-                </h4>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-              </div>
-            </div>
-          </div>
+          
+            {% endfor %}
         </div>
         <a class="btn btn-primary" href="{url 'projects'}">More Projects...
             <span class="glyphicon glyphicon-chevron-right"></span>

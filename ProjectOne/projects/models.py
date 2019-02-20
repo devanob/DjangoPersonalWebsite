@@ -12,15 +12,15 @@ from django.contrib.auth import models as auth_models
 from django.db import models as models
 from django_extensions.db import fields as extension_fields
 from organizer.models import Tag as ProjectTags
-
+from django.contrib.staticfiles.templatetags.staticfiles import static
 class Project(models.Model):
 
     # Fields
-    project_name = models.CharField(max_length=255,primary_key=True)
-    slug = extension_fields.AutoSlugField(populate_from='project_name', blank=True)
+    projectName = models.CharField(max_length=255,verbose_name='name',primary_key=True)
+    slug = extension_fields.AutoSlugField(populate_from='projectName', blank=True)
     created = models.DateTimeField(auto_now_add=True, editable=False)
     last_updated = models.DateTimeField(auto_now=True, editable=False)
-    img_link = models.CharField(max_length=100)
+    imglink = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)
     project_link = models.CharField(max_length=100)
     tags = models.ManyToManyField(ProjectTags, related_name='project_tag')
@@ -39,10 +39,10 @@ class Project(models.Model):
         return reverse('projects', args=(self.slug,))
 
     def __str__(self):
-        return " {} created on {} last updated {} ".format(
-            self.project_name,
+        return "{} created on {} last updated {} ".format(
+            self.projectName,
             self.created.strftime('%m-%d-%Y, %H:%M:%S'),
-            self.last_updated.strftime('%m-%d-%Y, %H:%M:%S')
+            self.last_updated.strftime('%m-%d-%Y, %H:%M:%S'),
             )
     def get_img(self):
-        return "img/projects/{}".format(self.img_link)
+        return static("img/projects/{}".format(self.imglink))
