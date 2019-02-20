@@ -16,6 +16,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -38,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'projects',
     'HomePage',
     'about',
     'blog',
     'contact',
+    'organizer',
+
     
 ]
 
@@ -82,10 +86,14 @@ WSGI_APPLICATION = 'ProjectOne.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'MAINSITE',
+        'USER': 'MYPROJECTS',
+        'PASSWORD': 'password'
     }
 }
+
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
