@@ -18,11 +18,11 @@
          
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url({{latest_project.get_img}}) ">
-            <a href="{{latest_project.project_link}}">
-              <div class="carousel-caption d-none d-md-block ">
+            <a href="">
+              <div class="carousel-caption  ">
 
                   <h1>{{latest_project.projectName}}</h1>
-                  <h4>{{latest_project.description|truncatewords:"10"}}</h4>
+                  <p>{{latest_project.description|truncatewords:"10"}}</p>
             
               </div>
             </a>
@@ -30,7 +30,7 @@
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url({% static 'img/img.png' %})">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption">
               <h2>Latest Blog Post</h2>
               <p>This is a description for lastest Blog Post</p>
             </div>
@@ -56,7 +56,8 @@
 
 {% block content %}
 <div class = "textOverlay">
-  <h1>Welcome All...</h1>
+  <h1>Welcome All</h1>
+  <p>Here YOu Will Find All My Content</p>
 </div>
 <section class = "sectionPage" id = "aboutPage" >
       <div class="container">
@@ -108,19 +109,28 @@
             <div class="col-lg-4 col-sm-6 portfolio-item">
               <div class="card h-100">
                 <a href="{{ project.project_link }}">
-                  <img class="card-img-top" src="{{ project.get_img }}" alt=""></a>
+                  <img class="card-img-top" src="{{ project.get_img }}" alt="">
+                </a>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Last Updated: {{ project.last_updated }}</li>
+                </ul>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="{{ project.project_link }}" >{{project.projectName}} </a>
                   </h4>
-                  <p class="card-text"?> {{ project.description|truncatewords:"25" }}</p>
+                  <p class="card-text"?> {{ project.description|truncatewords:"30" }}</p>
                 </div>
+                <a class="btn btn-outline-primary" href="{{ project.project_link }}">Github
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
               </div>
+             
             </div>
           
             {% endfor %}
         </div>
-        <a class="btn btn-primary" href="{url 'projects'}">More Projects...
+        <!-- Go To The First Page Of All Projects -->
+        <a class="btn btn-primary btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects...
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>
   </div>
