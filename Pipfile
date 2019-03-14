@@ -9,6 +9,8 @@ verify_ssl = true
 mysqlclient = "*"
 django = "*"
 django-extensions = "*"
+celery = "*"
+django-celery-beat = "*"
 
 [requires]
 python_version = "3.6"

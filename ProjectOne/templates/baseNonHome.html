@@ -16,7 +16,7 @@
     
     <!-- Bootstrap core CSS -->
     {% load staticfiles %}
-    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.png' %}"/>
+    <link rel="shortcut icon" href="{% static 'favicon.png' %}"/>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -28,34 +28,34 @@
 
     <!-- Navigation -->
 
-    <nav id = 'navbarTop' class="navbar justify-content-center fixed-top navbar-expand-lg  fixed-top navbar-custom">
+    <nav class="navbar fixed-top navbar-expand-lg  snavbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand  text-xl-left font-weight-bold js-scroll-trigger" href="#page-top">Devano's Personal</a> <!---Header Funciton-->
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">Devano's Domain</a> <!---Header Funciton-->
 
-        <button class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav justify-content-end nav-fill lg-auto nav-fill">
             <li class="nav-item">
-              <a class="nav-link btn  js-scroll-trigger font-weight-bold" href="#aboutPage">About Me</a>
+              <a class="nav-link btn  js-scroll-trigger " href="{% url 'homesection' section='about' %}">About Me</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle btn " href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Projects
                   </a>
               
                 <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownBlog">
-                    <a class="dropdown-item js-scroll-trigger" href="#projectSection">Quick Look</a>
+                    <a class="dropdown-item js-scroll-trigger" href="{% url 'homesection' section='quicklook' %}">Quick Look</a>
                     <a class="dropdown-item " href="{% url 'allProjects' pageNum=1 %}">All Projects</a>
                 </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn  js-scroll-trigger font-weight-bold" href="#contactPage">Contact</a>
+              <a class="nav-link btn  js-scroll-trigger" href="{% url 'homesection' section='contact' %}">Contact</a>
             </li>
            
             <li class="nav-item dropdown"> <!--Blog Header Here-->
-              <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle btn " href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
               </a>
               <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownBlog">
@@ -69,6 +69,10 @@
           </ul>
         
         </div>
+        <form class="form-inline my-2 my-lg-0" action="/home/" method = "post"> {% csrf_token %}
+      			<input class="form-control mr-sm-2" name="say" type="search" placeholder="Search" aria-label="Search">
+      			<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+   		</form>
       </div>
     </nav>
 
@@ -81,16 +85,21 @@
     {% endblock %}
     <!-- /.container -->
 
-  
+    <!-- Footer -->
+    <!---<section class = "sectionPage"  >
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Devano Brown 2019</p>
+      </div>
+    </footer>
+    </section >-->
+
     <!-- Bootstrap core JavaScript -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'js/scrolling-nav.js' %}"></script>
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
-    <script src="{% static 'js/navbar.js' %}"></script>
-    <script src="{% static 'js/time.js' %}"></script>
 
   </body>
 
 </html>
-s

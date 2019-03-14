@@ -13,17 +13,19 @@ from django.db import models as models
 from django_extensions.db import fields as extension_fields
 from organizer.models import Tag as ProjectTags
 from django.contrib.staticfiles.templatetags.staticfiles import static
+from ProjectUser.models import ProjectUser as ProjectUserHandlier
 class Project(models.Model):
 
     # Fields
     projectName = models.CharField(max_length=255,verbose_name='name',primary_key=True)
     slug = extension_fields.AutoSlugField(populate_from='projectName', blank=True)
-    created = models.DateTimeField(auto_now_add=True, editable=False)
-    last_updated = models.DateTimeField(auto_now=True, editable=False)
+    created = models.DateTimeField(verbose_name='Date Created')
+    last_updated = models.DateTimeField(verbose_name='Date Updated')
     imglink = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)
     project_link = models.CharField(max_length=100)
-    tags = models.ManyToManyField(ProjectTags, related_name='project_tag')
+    tags = models.ManyToManyField(ProjectTags, blank=True, null=True, related_name='project_tag')
+    projectHandlier = models.ForeignKey(ProjectUserHandlier,on_delete=models.CASCADE, related_name="projectUserHandlier",)
 
     class Meta:
         ordering = ('-last_updated',)

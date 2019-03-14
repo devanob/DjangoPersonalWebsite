@@ -18,11 +18,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from .views import HomePageView
+from .views import HomePageView,HomePageViewExternel
 #Organizer Urls
 ##
 urlpatterns = [
-    path(r'', HomePageView.as_view(), name = "home")
+    path(r'', HomePageView.as_view(), name = "home"),
+    path(r'<slug:section>/', HomePageViewExternel.as_view(), name = "homesection")
 ]
 
 

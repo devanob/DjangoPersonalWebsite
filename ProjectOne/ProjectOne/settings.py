@@ -27,9 +27,9 @@ SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
-
+CELERY_BROKER_URL = 'pyamqp://localhost'
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,13 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
+    'django_celery_beat',
+     'ProjectUser',
     'HomePage',
     'about',
     'blog',
     'contact',
     'organizer',
-
-    
 ]
 
 MIDDLEWARE = [
@@ -138,3 +138,6 @@ USE_TZ = True
 ##
 
 STATIC_URL = '/static/'
+
+##User Authentication 
+AUTH_USER_MODEL = "ProjectUser.ProjectUser" 
