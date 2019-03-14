@@ -44,7 +44,7 @@ def getUsers(userModel):
 		#repos["created_at"] = repos["created_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
 		repos["updated_at"] = make_aware(datetime.strptime(repos["updated_at"], "%Y-%m-%dT%H:%M:%SZ"))
 		#repos["updated_at"] = repos["updated_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
-		print(repos["updated_at"].tzinfo)
+		#print(repos["updated_at"].tzinfo)
 	logger.info("Sucess Getting Project")
 	#print(currentUserRepos)
 	return currentUserRepos,userProject 
@@ -70,6 +70,7 @@ def generateProjects(userModelString):
 		)
 		if project.last_updated != repo['updated_at'] :
 			project.last_updated = repo['updated_at'] 
+			project.save()
 	
 def updateProjects():
 	print('Hello')
