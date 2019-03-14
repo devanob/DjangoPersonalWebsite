@@ -69,9 +69,7 @@ def generateProjects(userModelString):
 				}
 		)
 		if project.last_updated != repo['updated_at'] :
-			print('Something Changed')
-			print(project)
-			
+			project.last_updated = repo['updated_at'] 
 	
 def updateProjects():
 	print('Hello')
