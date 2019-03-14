@@ -8,6 +8,8 @@ from urllib.request import Request, urlopen
 from celery import shared_task
 import json
 from ProjectUser.models import ProjectUser
+from django.conf import settings
+from django.utils.timezone import make_aware
 @shared_task
 #Return The Git User Repos List As An Array Of Dictionary Then Returns ProjectUser
 def getUsers(userModel):
@@ -38,10 +40,11 @@ def getUsers(userModel):
 	#print(currentUserRepos)
 	for key,repos in currentUserRepos.items():
 		#print(repos)
-		repos["created_at"] = datetime.strptime(repos["created_at"], "%Y-%m-%dT%H:%M:%SZ")
+		repos["created_at"] = make_aware(datetime.strptime(repos["created_at"], "%Y-%m-%dT%H:%M:%SZ"))
 		#repos["created_at"] = repos["created_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
-		repos["updated_at"] = datetime.strptime(repos["updated_at"], "%Y-%m-%dT%H:%M:%SZ")
+		repos["updated_at"] = make_aware(datetime.strptime(repos["updated_at"], "%Y-%m-%dT%H:%M:%SZ"))
 		#repos["updated_at"] = repos["updated_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
+		print(repos["updated_at"].tzinfo)
 	logger.info("Sucess Getting Project")
 	#print(currentUserRepos)
 	return currentUserRepos,userProject 
@@ -65,7 +68,11 @@ def generateProjects(userModelString):
 
 				}
 		)
-		if (created):
+		if project.last_updated != repo['updated_at'] :
+			print('Something Changed')
 			print(project)
-			print('Created')
+			
 	
+def updateProjects():
+	print('Hello')
+	#check if project have been updated else also update the projects themeselfs 
