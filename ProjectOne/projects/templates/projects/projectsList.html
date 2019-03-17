@@ -35,6 +35,9 @@
         <div class="col-md-5">
           <h3>{{page_item.projectName}}</h3>
           <p>{{page_item.description}}</p>
+          <p>Last Update:
+            <time class="timeLocal">{{page_item.last_updated|date:"c"}}</time> </p>
+          
           <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
             <span class="glyphicon glyphicon-chevron-right"></span>
           </a>

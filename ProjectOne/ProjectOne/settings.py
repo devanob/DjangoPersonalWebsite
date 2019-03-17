@@ -182,6 +182,11 @@ LOGGING = {
             'level': 'DEBUG',
             'propagate': False,
         },
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
         'ProjectOne': {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
