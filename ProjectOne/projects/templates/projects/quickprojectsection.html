@@ -16,7 +16,11 @@
                   <div class="col-lg-4 col-sm-6 portfolio-item">
                     <div class="card h-100">
                       <a href="{{ project.project_link }}">
-                        <img class="card-img-top" src="{{ project.get_img }}" alt="">
+                        <img class="card-img-top" 
+                        {% if project.project_image %}
+                          src="{{project.project_image.url}}"
+                        {% endif %}
+                        alt="">
                       </a>
                       <div class="card-body">
                           <h4 class="card-title">

@@ -11,6 +11,7 @@ django = "*"
 django-extensions = "*"
 celery = "*"
 django-celery-beat = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.6"

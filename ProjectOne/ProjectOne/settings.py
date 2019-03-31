@@ -32,6 +32,9 @@ STATIC_URL = '/static/'
 CELERY_BROKER_URL = 'pyamqp://localhost'
 # Application definition
 
+#MEDIA URL AND ROOT
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -97,6 +100,7 @@ DATABASES = {
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+print(STATICFILES_DIRS)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

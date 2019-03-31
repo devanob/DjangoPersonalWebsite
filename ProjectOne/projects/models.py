@@ -14,6 +14,10 @@ from django_extensions.db import fields as extension_fields
 from organizer.models import Tag as ProjectTags
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from ProjectUser.models import ProjectUser as ProjectUserHandlier
+from ProjectOne.settings import STATICFILES_DIRS
+def project_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_STATIC_URL<id>/<filename>
+    return '{}/img/project_img/{}'.format(STATICFILES_DIRS[0],filename)
 class Project(models.Model):
 
     # Fields
@@ -26,6 +30,8 @@ class Project(models.Model):
     project_link = models.CharField(max_length=100)
     tags = models.ManyToManyField(ProjectTags, blank=True, null=True, related_name='project_tag')
     projectHandlier = models.ForeignKey(ProjectUserHandlier,on_delete=models.CASCADE, related_name="projectUserHandlier",)
+    project_image = models.ImageField(upload_to="img/project_img/", 
+                                    blank=True)
 
     class Meta:
         ordering = ('-last_updated',)
