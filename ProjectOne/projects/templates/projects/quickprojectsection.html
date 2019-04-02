@@ -13,36 +13,36 @@
               </ol>
             <div class="row">        
                   {% for project in Projects %}
-                  <div class="col-lg-4 col-sm-6 portfolio-item">
-                    <div class="card h-100">
-                      <a href="{{ project.project_link }}">
-                        <img class="card-img-top" 
-                        {% if project.project_image %}
-                          src="{{project.project_image.url}}"
-                        {% endif %}
-                        alt="">
-                      </a>
-                      <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="{{ project.project_link }}" >{{project.projectName}} </a>
-                          </h4>
-                          <p class="card-text"?> {{ project.description }}</p>
-                        </div>
-                      <ul class="list-group list-group-flush">
-                        
-                        <li class="list-group-item">
-                          Last Updated Time:
-                          <time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time>
-                         
-                        </li>
-                      </ul>
-                     
-                      <a class="btn btn-outline-primary" href="{{ project.project_link }}">Github
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
+                    <div class="col-lg-4 col-sm-6 portfolio-item">
+                      <div class="card h-100">
+                        <a href="{{ project.project_link }}">
+                          <img class="card-img-top" 
+                          {% if project.project_image %}
+                            src="{{project.project_image.url}}"
+                          {% endif %}
+                          alt="">
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="{{ project.project_link }}" >{{project.projectName}} </a>
+                            </h4>
+                            <p class="card-text"?> {{ project.description }}</p>
+                          </div>
+                        <ul class="list-group list-group-flush">
+                          
+                          <li class="list-group-item">
+                            Last Updated Time:
+                            <time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time>
+                          
+                          </li>
+                        </ul>
+                      
+                        <a class="btn btn-outline-primary" href="{{ project.project_link }}">Github
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                      </div>
+                    
                     </div>
-                   
-                  </div>
                   {% endfor %}
               </div>
               <!-- Go To The First Page Of All Projects -->

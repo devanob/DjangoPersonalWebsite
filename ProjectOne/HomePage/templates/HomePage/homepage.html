@@ -18,7 +18,11 @@
          
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active">
-            <img src="{{latest_project.get_img}}" class ="img-fluid"  alt="">
+            <img 
+            {% if latest_project.project_image %}
+              src="{{latest_project.project_image.url}}"
+            {% endif %}
+            class ="img-fluid"  alt="">
             <a href="">
               <div class="carousel-caption">
 
@@ -53,10 +57,10 @@
 {% endblock%}
 
 {% block content %}
-<div class = "textOverlay" >
+<!-- <div class = "textOverlay" >
   <h1>Welcome All</h1>
   <p>Here You Will Find All My Content</p>
-</div>
+</div> -->
 <!-- About Page  -->
 {% include "about/about.html" %}
 <!----SectionProjects-Block -->
@@ -65,15 +69,7 @@
 <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog " role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Like What You Saw? Contact Me 
-            
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+     
         <div class="modal-body">
           {% include "contact/contact.html" %}
         </div>

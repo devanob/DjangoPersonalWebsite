@@ -116,8 +116,12 @@ img {
   width: 100vw;
   overflow:hidden;
 }
-.navbar-dark {
+.navbar-toggler {
   
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(24, 168, 187);
+  height: 50px !important;
 }
 .navbar-toggle .icon-bar{
   width: 50px !important;
@@ -149,11 +153,11 @@ img {
 
 
 .navi-outline {
-  border-spacing: 15px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width :1px;
-  border-color:rgb(24, 168, 187);
+  border-spacing: 15px !important;
+  border-radius: 5px !important;
+  border-style: solid !important;
+  border-width :1px !important;
+  border-color:rgb(24, 168, 187) !important;
 }
 
  .navbar a:hover  {
@@ -182,4 +186,24 @@ img {
 
 .breadcrumb{
   background-color: rgba(0, 0, 0, 0);
+}
+
+/* animations  */
+.navbar-toggler-icon{
+  background-image: url("/media/img/navbar_img/down-arrow.svg")  !important;
+  
+}
+
+#Dbrand{
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+}
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
