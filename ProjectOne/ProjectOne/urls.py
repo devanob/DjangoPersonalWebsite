@@ -35,3 +35,7 @@ from django.conf import settings
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = "Personal Admin"
+admin.site.site_title = "Personal's Admin Portal"
+admin.site.index_title = "Welcome to Personal's Administration Control Page"

@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'django_celery_beat',
-     'ProjectUser',
+    'ProjectUser',
     'HomePage',
     'about',
     'blog',
@@ -100,7 +100,7 @@ DATABASES = {
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
-print(STATICFILES_DIRS)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -197,3 +197,10 @@ LOGGING = {
         },
     }
 }
+
+#staticApp
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)

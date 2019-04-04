@@ -7,7 +7,7 @@ from django.http import Http404
 # Create your views here.
 class ProjectView(View):
     template_name = "projects/projectsList.html"
-    num_pages = 3 # number of pages per pagination page 
+    num_pages = 3 # number of items per pagination page 
     default_page =  1 ## page to do if error such as out of bound paging 
     #get function no slug
     def get(self,request, pageNum):
@@ -21,5 +21,7 @@ class ProjectView(View):
         except EmptyPage:
             page = pagination_Pages.page(pagination_Pages.num_pages)
         pagination_context = {'current_page' : page}
+        if pageNum == 1 :
+            pagination_context['addHeader'] = True
         return render(request, self.template_name, pagination_context)
        

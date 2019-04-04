@@ -4,11 +4,7 @@ let viewableItem= (element) =>{
         let elemBottom = elemTop + element.offsetHeight;
         let viewportTop = window.scrollY;
         let viewportBottom = viewportTop + window.innerHeight;
-        // console.log("elementBotton: "+elemBottom);
-        // console.log("viewPortTop: "+viewportTop);
-        // console.log("viewPortBottom: "+viewportBottom);
-        // console.log("elementtop: "+elemTop);
-        return elemBottom >= viewportTop;
+        return elemBottom <= viewportBottom && elemTop >= viewportTop ;
 }
 let headerViewableBefore = true;// True By Default
 let scrollEventHandlier = () =>{
