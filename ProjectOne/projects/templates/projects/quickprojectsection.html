@@ -1,53 +1,47 @@
-<section class = "sectionPage" id = "projectSection">
-  
-        <div class="container">
-            <h1 class="mt-4 mb-3">Lastest Projects
-                <small>Take A Look</small>
-              </h1>
-            
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="#page-top" class = "js-scroll-trigger">Home</a>
-                </li>
-                <li class="breadcrumb-item active">Projects</li>
-              </ol>
-            <div class="row">        
+{% load staticfiles %}
+
+<section class = "sectionPage  mb-0" id = "projectSection">
+        <div class="container addCustom shadow p-3 mb-5 bg-white rounded">
+            <h1 class="text-center text-uppercase ">Quick Project</h1>
+            <hr class="star-dark mb-5">
+            <h3 class="text-center text-uppercase ">Personal's Latest Projects</h3>
+            <div class="row ProjectRow">        
                   {% for project in Projects %}
-                    <div class="col-lg-4 col-sm-6 portfolio-item">
-                      <div class="card h-100">
-                        <a href="{{ project.project_link }}">
-                          <img class="card-img-top" 
-                          {% if project.project_image %}
-                            src="{{project.project_image.url}}"
-                          {% endif %}
-                          alt="">
-                        </a>
+                    <div class="col-lg-4 customCol">
+                      <div class="card text-center border-dark">
+                        <div class="card-top">
+                          <a href="{{ project.project_link }}">
+                            <img class="card-img-top" 
+                            {% if project.project_image %}
+                              src="{{project.project_image.url}}"
+                            {% endif %}
+                            alt="">
+                          </a>
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">
-                              <a href="{{ project.project_link }}" >{{project.projectName}} </a>
-                            </h4>
+                          <div class="innerBody">
+                            <p class="card-title">
+                            <a href="{{ project.project_link }}" >{{project.projectName}} </a>
+                            </p>
                             <p class="card-text"?> {{ project.description }}</p>
+                            <p class="card-text"?><time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time></p>
+                            <p class="btn btn-outline-primary" href="{{ project.project_link }}">Github
+                            </p>
                           </div>
-                        <ul class="list-group list-group-flush">
-                          
-                          <li class="list-group-item">
-                            Last Updated Time:
-                            <time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time>
-                          
-                          </li>
-                        </ul>
-                      
-                        <a class="btn btn-outline-primary" href="{{ project.project_link }}">Github
-                          <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
+                        </div>
+                        
                       </div>
                     
                     </div>
                   {% endfor %}
-              </div>
+            </div>
+            <div class="row center justify-content-center">
+                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects Or Look Below
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+              
               <!-- Go To The First Page Of All Projects -->
-              <a class="btn btn-primary btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects...
-                <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
+             
         </div>
 </section>

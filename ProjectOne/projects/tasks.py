@@ -1,7 +1,7 @@
 
 import os
 from celery.utils.log import get_task_logger
-logger = get_task_logger(__name__)
+logger = get_task_logger('ProjectOne')
 from datetime import datetime
 import urllib.request
 from urllib.request import Request, urlopen
@@ -17,7 +17,8 @@ def getUsers(userModel):
 		userProject = ProjectUser.objects.get(username=userModel)
 		gitUser = userProject.gitUser
 		print(gitUser)
-	except:
+	except Exception:
+		logger.info(traceback.print_exc())
 		logger.info("User Couldnt Not Be Found:{}".format(userModel))
 		raise Exception("User Couldnt Not Be Found:{}".format(userModel))
 	    #Do nothing User Not Found Raise Error
@@ -45,33 +46,28 @@ def getUsers(userModel):
 		repos["updated_at"] = make_aware(datetime.strptime(repos["updated_at"], "%Y-%m-%dT%H:%M:%SZ"))
 		#repos["updated_at"] = repos["updated_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
 		#print(repos["updated_at"].tzinfo)
-	logger.info("Sucess Getting Project")
+		logger.info("Sucess Getting Project")
 	#print(currentUserRepos)
 	return currentUserRepos,userProject 
-
 @shared_task
 def generateProjects(userModelString):
 	listRepos,modelUser = getUsers(userModelString)
 	currentUserProjects = modelUser.projectUserHandlier.all()
 	for key, repo in listRepos.items():
+		logger.info(repo['description'])
 		project, created  = currentUserProjects.get_or_create(
 			projectName = key,
 			defaults={
 				'created': repo['created_at'],
 				'last_updated': repo['updated_at'],
 				'imglink' : "{}.jpg".format(key), 
-				'description': repo['description'],
+				'description': repo['description'] if repo['description'] is not None else " ",
 				'project_link' : repo['html_url'], 
-				'projectHandlier' : modelUser
-
-
-
+				'projectHandlier' : modelUser,
+				'project_image' : None
 				}
 		)
 		if project.last_updated != repo['updated_at'] :
 			project.last_updated = repo['updated_at'] 
 			project.save()
 	
-def updateProjects():
-	print('Hello')
-	#check if project have been updated else also update the projects themeselfs 

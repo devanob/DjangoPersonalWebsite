@@ -26,7 +26,7 @@ SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["devano.tk"]
 AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
 CELERY_BROKER_URL = 'pyamqp://localhost'
@@ -43,12 +43,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
+    'contact',
     'django_celery_beat',
     'ProjectUser',
     'HomePage',
     'about',
     'blog',
-    'contact',
     'organizer',
 ]
 
@@ -64,6 +64,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ProjectOne.urls'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print(BASE_DIR)
 #print(BASE_DIR)
 TEMPLATES = [
     {
@@ -90,9 +91,13 @@ WSGI_APPLICATION = 'ProjectOne.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'MAINSITE',
-        'USER': 'MYPROJECTS',
-        'PASSWORD': '1101110113devanobrown'
+        'NAME': 'Personals',
+        'USER': 'DevanoBrown',
+        'PASSWORD': '1101110113devanobrown',
+        'OPTIONS':{ 'charset': 'utf8mb4',
+                    'use_unicode': True,
+        
+        },
     }
 }
 
@@ -127,7 +132,6 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_L10N = True

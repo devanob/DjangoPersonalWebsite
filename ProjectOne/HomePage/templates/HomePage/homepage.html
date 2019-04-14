@@ -1,13 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %}
-{{block.super}}Home
+
+{% load staticfiles %}
+{% block customCSS %}
+<link href="{% static 'projects/css/quickProject.css' %}" rel="stylesheet">
 {% endblock %}
 
-{% block header%}
-{% load staticfiles %}
+{% block title %}
+{{block.super}} Personal's Home
+{% endblock %}
 
-<section  class="headerCarousel" id= "headerSection">
+{% block extraJS %}
+<script src="{% static 'js/scrolling-nav.js' %}"></script>
+<script src="{% static 'js/time.js' %}"></script>
+<script src="{% static 'contact/js/contact.js' %}"></script>
+{% endblock %}
+
+
+
+
+{% block header%}
+<section  class="headerCarousel viewables" id="headerSection">
    
       <div id="carouselHeader" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -57,32 +70,13 @@
 {% endblock%}
 
 {% block content %}
-<!-- <div class = "textOverlay" >
-  <h1>Welcome All</h1>
-  <p>Here You Will Find All My Content</p>
-</div> -->
-<!-- About Page  -->
+
 {% include "about/about.html" %}
 <!----SectionProjects-Block -->
 {% include "projects/quickprojectsection.html" %}
-<!-- Modal -->
-<div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog " role="document">
-      <div class="modal-content">
-     
-        <div class="modal-body">
-          {% include "contact/contact.html" %}
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send</button>
-        </div>
-      </div>
-    </div>
-  </div>
 <!----SectionProjects-EndBlock -->
 <!----Section Contact--->
-
+{% include "contact/contact.html" %}
 <!----SectionProjects-EndBlock -->
 <!---
   --->

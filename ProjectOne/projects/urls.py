@@ -15,10 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from django.conf.urls import include, url
-from projects.views import ProjectView
+from projects.views import ProjectView, BaseRedirect,SearchProjects
+
 
 urlpatterns = [
-    path(r'all-projects/page=<int:pageNum>/', ProjectView.as_view(), name = "allProjects")
+    path(r'all-projects/page=<int:pageNum>/', ProjectView.as_view(), name = "allProjects"),
+    path(r'search/page=<int:pageNum>/',SearchProjects.as_view(), name = "searchProject"),
+    re_path(r'.*',BaseRedirect.as_view() ),
 ]

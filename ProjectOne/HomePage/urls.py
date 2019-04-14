@@ -23,7 +23,6 @@ from .views import HomePageView,HomePageViewExternel
 ##
 urlpatterns = [
     path(r'', HomePageView.as_view(), name = "home"),
-    path(r'<slug:section>/', HomePageViewExternel.as_view(), name = "homesection")
 ]
 
 

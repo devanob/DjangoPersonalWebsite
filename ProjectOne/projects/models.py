@@ -28,7 +28,7 @@ class Project(models.Model):
     imglink = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)
     project_link = models.CharField(max_length=100)
-    tags = models.ManyToManyField(ProjectTags, blank=True, null=True, related_name='project_tag')
+    tags = models.ManyToManyField(ProjectTags, blank=True, related_name='project_tag')
     projectHandlier = models.ForeignKey(ProjectUserHandlier,on_delete=models.CASCADE, related_name="projectUserHandlier",)
     project_image = models.ImageField(upload_to="img/project_img/", 
                                     blank=True)

@@ -1,32 +1,35 @@
+{% load staticfiles %}
+<section class = "sectionPage" id = "contactPage"  >
+    <div class="container shadow p-3 mb-5 bg-white rounded text-center text-uppercase" >
+      <h1 class="text-center text-uppercase ">Contact</h1>
+      <hr class="star-dark mb-5">
+      <form name="sentMessage" id="contactForm" method="post" data-toggle="validator" role="form">
+        {% csrf_token %}
+        <div class="messages">
+        </div> <!--Message Message SenT For Denied-->
+        <div class="form-row form-group" > 
+          <div class="col-6 ">
+            <label for="{{ form.contact_name.id_for_label }}">Name</label>
+            {{form.contact_name}}
+          </div>
+          <div class="col-6">
+            <label for="{{ form.contact_email.id_for_label }}">Email</label>
+            {{form.contact_email}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="{{ form.contact_phone_number.id_for_label }}">Phone Number</label>
+          {{form.contact_phone_number}}
+        </div>
+         <div class="form-group">
+          <label for="{{ form.contact_message.id_for_label }}">Message</label>
+          {{form.contact_message}}
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+         
+      </form>
+      
+        <!-- Intro Content -->
+    </div>
+</section>
 
-    <h3>Send me a Message Or Check Me Out On Social Media Below</h3>
-    <form name="sentMessage" id="contactForm" novalidate>
-      <div class="control-group form-group">
-        <div class="controls">
-          <label>Full Name:</label>
-          <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-          <p class="help-block"></p>
-        </div>
-      </div>
-      <div class="control-group form-group">
-        <div class="controls">
-          <label>Phone Number:</label>
-          <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
-        </div>
-      </div>
-      <div class="control-group form-group">
-        <div class="controls">
-          <label>Email Address:</label>
-          <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-        </div>
-      </div>
-      <div class="control-group form-group">
-        <div class="controls">
-          <label>Message:</label>
-          <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
-        </div>
-      </div>
-      <div id="success"></div>
-      <!-- For success/fail messages -->
-    </form>
- 

@@ -21,9 +21,10 @@ from .views import redirectHome
 from HomePage.urls import urlpatterns as HomeURL
 from about.urls  import urlpatterns as aboutURL
 from projects.urls import urlpatterns as projectsURL
+
 #Organizer Urls
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('personals-admin/', admin.site.urls),
     path(r'', redirectHome ),
     path(r'home/', include( HomeURL) ),
     path(r'about/', include(aboutURL) ),

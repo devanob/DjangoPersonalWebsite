@@ -1,3 +1,4 @@
+
 let viewableItem= (element) =>{
 
         let elemTop = element.offsetTop;
@@ -7,19 +8,15 @@ let viewableItem= (element) =>{
         return elemBottom <= viewportBottom && elemTop >= viewportTop ;
 }
 let headerViewableBefore = true;// True By Default
-let scrollEventHandlier = () =>{
-    let header = document.getElementById("headerSection");
-    //console.log(window.scrollY);
-    //console.log("Scrool Event Working");
-    let headerViewable = viewableItem(header);
+let helperScrollEventHandlier = (element)=>{
+    let headerViewable = viewableItem(element);
     if (headerViewable && headerViewableBefore == false){ //We'll Need To Chnage Styling
         headerViewableBefore = true;
         let navibar  = document.getElementById("navbarTop");
         navibar.classList.add("navbar-custom");
         navibar.classList.remove("navbar-dark");
         navibar.classList.remove("bg-dark");
-
-        console.log("In Veiw Port Again");
+        return false;
     }
     else if (!headerViewable && headerViewableBefore == true){ //We'll Need To chnage styling back
         headerViewableBefore = false;
@@ -27,22 +24,58 @@ let scrollEventHandlier = () =>{
         navibar.classList.add("navbar-dark");
         navibar.classList.add("bg-dark");
         navibar.classList.remove("navbar-custom");
-        console.log("Not In View Port Again");
+        return true;
     }
+    
+    
+}
+let scrollEventHandlier = () =>{
+    let viewAbles = document.getElementsByClassName("viewables");
+    for (let i = 0 ; i < viewAbles.length; i++){
+      if (helperScrollEventHandlier(viewAbles[i])){
+        return;
+      }
+    }
+    hideNavScroll();
 }
 document.addEventListener("scroll",scrollEventHandlier);
 
-document.addEventListener("DOMContentLoaded", () =>{
-    let header = document.getElementById("headerSection");
-    let isViewablle = viewableItem(header);
-    if (!isViewablle){
+let setViewAvaibility = (element)=>{
+    let isViewable = viewableItem(element);
+    if (!isViewable){
         let navibar  = document.getElementById("navbarTop");
-        let headerViewableBefore = false;
         navibar.classList.add("navbar-dark");
         navibar.classList.add("bg-dark");
         navibar.classList.remove("navbar-custom");
+        return false;
     }
+    return true;
+}
+document.addEventListener("DOMContentLoaded", () =>{
+    let allViewable = document.getElementsByClassName("viewables");
+    for (let i = 0 ; i < allViewable.length ; i++){
+      if(setViewAvaibility(allViewable[i])){
+        console.log("Hello");
+        return; // if any viewable item is in the view port then return 
+      }
+    }
+    let navibar  = document.getElementById("navbarTop");
+    navibar.classList.add("navbar-dark");
+    navibar.classList.add("bg-dark");
+    navibar.classList.remove("navbar-custom");
+    
 ;
 });
 
+//Nav Bar Interaction 
+var prevScrollpos = window.pageYOffset;
+let hideNavScroll =()=>{
+    var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbarTop").style.opacity = "1.0";
+  } else {
+    document.getElementById("navbarTop").style.opacity = "0.4";
+  }
+  prevScrollpos = currentScrollPos;
+}
 

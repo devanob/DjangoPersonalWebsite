@@ -7,8 +7,8 @@
 
 
 
-@media (min-width: 992px) {
-  
+body{
+
 }
 
 .carousel-item {
@@ -19,19 +19,13 @@
   background-size: cover;
 }
 
-.portfolio-item {
-  margin-bottom: 30px;
-}
 
 .sectionPage {
 
-  background-color: #e9e9e993;
-  padding: 2%;
+  padding: 5%;
   width: 100vw;
   min-height: 100vh;
-  border-style: solid;
-  border-width: 1px;
-  border-color: red;
+
   
 }
 
@@ -63,25 +57,16 @@
     width:100%;
     text-align:center;
     background-color:rgb(24, 168, 187, 0.2);
-    
-  
-  
 }
 
-.nav-link  {
-  text-decoration: underline;
-}
+
 @media only screen and (max-width: 768px){
   .navbar-collapse{
     background-color:rgb(24, 168, 187, 0.2);
   }
 }
 
-.card-img-top {
-  width: 100%;
-  height: 40vh;
-  object-fit: cover;
-  }
+
   
   
 
@@ -98,18 +83,14 @@
     overflow: hidden; 
 }
 
-.row-eq-height {
-    width: 100%;
-    height: 50vh;
-   
-}
+
 
 
 .carousel-item img {
   height: 100vh; 
   width: 100vw;
   overflow:hidden;
-  object-fit: cover;
+  object-fit: fill;
 }
 .navbar-toggler {
   
@@ -152,16 +133,12 @@
   border-color:rgb(24, 168, 187) !important;
 }
 
-.navbar a:hover  {
-  color: rgb(24, 168, 187);
+.navbar > a:hover  {
+  color: rgb(255, 255, 255);
   
 }
-.portfolio-item  .card:hover{
 
-  box-shadow: 0px 0 10px rgba(81, 203, 238, 1);
- 
-  
-}
+
 .dropdown:hover .dropdown-menu {
  
   display: block;
@@ -173,7 +150,7 @@
   display: block;
   text-align: center;
   line-height: 150%;
-  /* font-size: .85em; */
+
 }
 
 .breadcrumb{
@@ -217,3 +194,25 @@
   
 }
 
+.navbar ul li > a:hover{
+  color: white;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+
+#navbarTop{
+  transition: opacity 1.0s !important;  
+}
+
+.bootstrap-select{
+  overflow: visible !important;
+  z-index:999 !important;
+}
+
+.row{
+   overflow: visible !important;
+  z-index:999 !important;
+}

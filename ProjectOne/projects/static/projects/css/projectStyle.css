@@ -12,10 +12,7 @@
    
 }
 
-.navbar{
-    position: fixed;
-    z-index: 7;
-}
+
 
 
 .centered{
@@ -27,3 +24,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.row-eq-height {
+    width: 100%;
+    height: 35vh;
+   
+}
+
+
