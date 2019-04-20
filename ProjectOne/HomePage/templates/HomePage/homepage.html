@@ -4,6 +4,7 @@
 {% load staticfiles %}
 {% block customCSS %}
 <link href="{% static 'projects/css/quickProject.css' %}" rel="stylesheet">
+<link href="{% static 'contact/css/contact.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
@@ -20,14 +21,14 @@
 
 
 {% block header%}
-<section  class="headerCarousel viewables" id="headerSection">
+<section  class="headerCarousel" id="headerSection">
    
       <div id="carouselHeader" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
           <li data-target="#carouselHeader" data-slide-to="1"></li>
        </ol>
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner viewables" role="listbox">
          
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active">

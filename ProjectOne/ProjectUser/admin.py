@@ -2,10 +2,17 @@ from django.contrib import admin
 from .models import ProjectUser
 from django.contrib.auth.admin import UserAdmin as UseBaseAdmin
 from projects.tasks import generateProjects
+from django.contrib.auth.forms import UserCreationForm
 import logging
 log = logging.getLogger('ProjectOne')
 print(__name__)
-## User Admin Functions
+
+class UserCreateForm(UserCreationForm):
+
+    class Meta:
+        model = ProjectUser
+        fields = ('username', 'first_name' , 'last_name', )
+
 
 def UpdateProjects(modeladmin, request, queryset):
     for user in queryset:
@@ -18,8 +25,9 @@ def UpdateProjects(modeladmin, request, queryset):
     
 
 
-UpdateProjects.short_description = "UpDate Selected User Project"
+UpdateProjects.short_description = "Update Selected User Project"
 class UserAdmin(UseBaseAdmin):
+    add_form = UserCreateForm
     # The forms to add and change user instances
     # The fields to be used in displaying the User model.
     # These override the definitions on the base UserAdmin

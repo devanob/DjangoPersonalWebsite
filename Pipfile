@@ -12,6 +12,7 @@ django-extensions = "*"
 celery = "*"
 django-celery-beat = "*"
 pillow = "*"
+bcrypt = "*"
 
 [requires]
 python_version = "3.6"

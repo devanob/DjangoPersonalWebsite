@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="{% static 'img/favicon/favicon.svg' %}"/>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+    <link href="{% static 'css/personals.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     
@@ -37,7 +37,7 @@
     <!-- Navigation -->
 
     <nav id = 'navbarTop' class="navbar text-center justify-content-center fixed-top navbar-expand-lg navbar-custom">
-      <div class="container">
+      <div class="container-fluid">
         <a class="navbar-brand  text-xl-left font-weight-bold js-scroll-trigger"
              
              href= 
@@ -50,14 +50,13 @@
         </a> <!---Header Funciton-->
 
         <button class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            MENU
-        <span class="navbar-toggler-icon" ></span>
+           <span class="navbar-toggler-icon" ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             {% block navBarlinks %}
             <li class="nav-item">
-              <a class="nav-link btn  js-scroll-trigger font-weight-bold" href="#aboutPage">About</a>
+              <a class="nav-link btn  js-scroll-trigger font-weight-bold" data-toggle="collapse" href="#aboutPage">About</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -33,7 +33,8 @@
       </div>
     </div>
     {% endif%}
-      <div class = "container">
+<section class="sectionPage">
+      <div class = "container-fluid addCustom shadow p-3 mb-5 bg-white rounded">
       <!-- Page Heading/Breadcrumbs -->
       <h1 class="mt-4 mb-3"> PROJECTS
           <small>Search Below For Projects</small>
@@ -45,111 +46,122 @@
         </li>
         <li class="breadcrumb-item active">Projects</li>
       </ol>
-      <form class="row" action="{% url 'searchProject' pageNum=1 %}" method="get">
-        <div class="col-6"> {{formSearch.search_project_text }}</div>
-        <div class="col-2"> {{formSearch.search_year}}</div>
-        <div class="col-2"> {{formSearch.search_month}}</div>
-        <div class="col-2">
-          <button type="submit" class="btn btn-primary btn-lg">Search</button>
+      <form  action="{% url 'searchProject' pageNum=1 %}" method="get">
+        <div class="row align-items-center">
+          <div class="col-xs-6 col-sm-6 col-lg-6"> {{formSearch.search_project_text }}</div>
+          <div class="col-xs-2 col-sm-2 col-lg-2"> {{formSearch.search_year}}</div>
+          <div class="col-xs-2 col-sm-2 col-lg-2"> {{formSearch.search_month}}</div>
+          <div class="col-xs-2 col-sm-2 col-lg-2 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Search</button>
+          </div>
         </div>
       </form>
+      
+
 
       <!-- Project Base -->
-      {% for page_item  in current_page %}
-    
-	  <div class="row projectRow">
-      <div class="col-md-6" >
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0 row-eq-height" 
-          {% if page_item.project_image %}
-              src="{{page_item.project_image.url}}"
-          {% endif %} 
-          alt="">
-        </a>
-      </div>
-      <div class="col-md-6">
-        <h3 title="{{page_item.projectName}}">{{page_item.projectName}}</h3>
-        <p>{{page_item.description}}</p>
-        <p>Last Update:
-          <time class="timeLocal" utcTime='{{page_item.last_updated|date:"c"}}'>{{page_item.last_updated|date:"c"}}</time> 
-        </p>
-        <p>Date Created:
-          <time class="timeLocal" utcTime='{{page_item.created|date:"c"}}'>{{page_item.created|date:"c"}}</time> 
-        </p>
+      {% if current_page is not None %}
+        {% for page_item  in current_page %}
+      
+        <div class="row projectRow align-items-center">
+          <div class="col-md-6" >
+            <a href="#">
+              <img class="img-fluid rounded mb-3 mb-md-0 row-eq-height" 
+              {% if page_item.project_image %}
+                  src="{{page_item.project_image.url}}"
+              {% endif %} 
+              alt="">
+            </a>
+          </div>
+          <div class="col-md-6">
+            <h3 title="{{page_item.projectName}}">{{page_item.projectName}}</h3>
+            <p>{{page_item.description}}</p>
+            <p>Last Update:
+              <time class="timeLocal" utcTime='{{page_item.last_updated|date:"c"}}'>{{page_item.last_updated|date:"c"}}</time> 
+            </p>
+            <p>Date Created:
+              <time class="timeLocal" utcTime='{{page_item.created|date:"c"}}'>{{page_item.created|date:"c"}}</time> 
+            </p>
+            
+            <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        </div>
+          <!-- /.row -->
         
-        <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
-          <span class="glyphicon glyphicon-chevron-right"></span>
-        </a>
+        {% endfor %}
+      {% else %}
+      <div>
+        No Projects To Show
       </div>
-	  </div>
-	      <!-- /.row -->
-	     
-      {% endfor %}
-
+      {% endif %}
       <!-- /.row -->
 
 
       <!-- Pagination -->
-      <ul class="pagination justify-content-center pagination-lg">
-        <!-- Previous -->
-        {% if current_page.has_previous%}
-          <li class="page-item">
-            <a class="page-link" href="{% url 'allProjects' pageNum=current_page.previous_page_number %}" aria-label="Previous">
-             <span aria-hidden="true">&laquo;</span>
-                Previous
-            </a>
-          </li>
-        {% else %}
-          <li class="page-item disabled">
-              <a class="page-link" href="" %} aria-label="Previous">
+      {% if current_page is not None %}
+        <ul class="pagination justify-content-center pagination-lg">
+            <!-- Previous -->
+            {% if current_page.has_previous%}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'allProjects' pageNum=current_page.previous_page_number %}" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
-                Previous
-              </a>
-          </li>
-        {% endif %}
-        <!--  -->
-        <!-- Pagination BLOCK -->
-        {% for page_link in current_page.paginator.page_range %}
-        <!-- Previous End -->
-        {% if current_page.number == page_link%}
-          <li class="page-item active">
-            <a class="page-link" href="{% url 'allProjects' pageNum=page_link %}">{{page_link}}</a>
-          </li>
-        {% else %}
-          <li class="page-item ">
-              <a class="page-link" href="{% url 'allProjects' pageNum=page_link %}">{{page_link}}</a>
-          </li>
-        {% endif %}
-        <!-- Pagination END BLOCK -->
-        <!--  -->
-        {% endfor %}
+                    Previous
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" href="" %} aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    Previous
+                </a>
+            </li>
+            {% endif %}
+            <!--  -->
+            <!-- Pagination BLOCK -->
+            {% for page_link in current_page.paginator.page_range %}
+            <!-- Previous End -->
+            {% if current_page.number == page_link%}
+            <li class="page-item active">
+                <a class="page-link" href="{% url 'allProjects' pageNum=page_link %}">{{page_link}}</a>
+            </li>
+            {% else %}
+            <li class="page-item ">
+                <a class="page-link" href="{% url 'allProjects' pageNum=page_link %}">{{page_link}}</a>
+            </li>
+            {% endif %}
+            <!-- Pagination END BLOCK -->
+            <!--  -->
+            {% endfor %}
 
-        <!-- Next -->
-        {% if current_page.has_next %}
-          <li class="page-item">
-            <a class="page-link" href="{% url 'allProjects' pageNum=current_page.next_page_number %}" aria-label="Next">
-              Next 
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Next</span>
-            </a>
-          </li>
-        {% else %}
-        <li class="page-item disabled" disabled>
-            <a class="page-link  disabled" href="#" aria-label="Next">
-              Next
-              <span class="sr-only">Next</span>
-              <span aria-hidden="true">&raquo;</span>
-              
-            </a>
-          </li>
-        {% endif %}
-       
-        <!-- NextEnd -->
-      </ul>
+            <!-- Next -->
+            {% if current_page.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="{% url 'allProjects' pageNum=current_page.next_page_number %}" aria-label="Next">
+                Next 
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+                </a>
+            </li>
+            {% else %}
+            <li class="page-item disabled" disabled>
+                <a class="page-link  disabled" href="#" aria-label="Next">
+                Next
+                <span class="sr-only">Next</span>
+                <span aria-hidden="true">&raquo;</span>
+                
+                </a>
+            </li>
+            {% endif %}
+        
+            <!-- NextEnd -->
+        </ul>
+      {% endif %}
 
     </div>
   </div>
+</section>
     <!-- /.container -->
-
 {% endblock %}
 

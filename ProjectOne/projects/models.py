@@ -18,6 +18,7 @@ from ProjectOne.settings import STATICFILES_DIRS
 def project_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_STATIC_URL<id>/<filename>
     return '{}/img/project_img/{}'.format(STATICFILES_DIRS[0],filename)
+    
 class Project(models.Model):
 
     # Fields

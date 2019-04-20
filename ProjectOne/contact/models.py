@@ -25,7 +25,7 @@ class Contact(models.Model):
 
 
     class Meta:
-        ordering = ('-pk',)
+        ordering = ('-contact_date',)
 
     def __unicode__(self):
         return u'%s' % self.pk
@@ -36,5 +36,8 @@ class Contact(models.Model):
 
     def get_update_url(self):
         return reverse('Contact_contact_update', args=(self.pk,))
+    
+    def __str__(self):
+        return "From: {} Date: {}".format(self.contact_name, self.contact_date)
 
 

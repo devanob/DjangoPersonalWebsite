@@ -51,11 +51,12 @@ let setViewAvaibility = (element)=>{
     }
     return true;
 }
-document.addEventListener("DOMContentLoaded", () =>{
+
+let loadNav = ()=>{
+  document.addEventListener("DOMContentLoaded", () =>{
     let allViewable = document.getElementsByClassName("viewables");
-    for (let i = 0 ; i < allViewable.length ; i++){
+    for (let i = 0 ; i < allViewable.length; i++){
       if(setViewAvaibility(allViewable[i])){
-        console.log("Hello");
         return; // if any viewable item is in the view port then return 
       }
     }
@@ -67,6 +68,18 @@ document.addEventListener("DOMContentLoaded", () =>{
 ;
 });
 
+}
+
+if(document.readyState === 'loading'){
+
+  document.addEventListener('DOMContentLoaded',loadNav );
+
+}
+else{
+
+  loadNav()
+}
+document.addEventListener('DOMContentLoaded',loadNav );
 //Nav Bar Interaction 
 var prevScrollpos = window.pageYOffset;
 let hideNavScroll =()=>{
@@ -74,7 +87,7 @@ let hideNavScroll =()=>{
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbarTop").style.opacity = "1.0";
   } else {
-    document.getElementById("navbarTop").style.opacity = "0.4";
+    document.getElementById("navbarTop").style.opacity = "0.5";
   }
   prevScrollpos = currentScrollPos;
 }

@@ -7,9 +7,9 @@
 
 
 
-body{
-
-}
+ body {
+  background-color: rgba(24, 168, 187, 0.157);
+ }
 
 .carousel-item {
   background: no-repeat center center scroll;
@@ -25,7 +25,9 @@ body{
   padding: 5%;
   width: 100vw;
   min-height: 100vh;
-
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fill;
   
 }
 
@@ -41,10 +43,14 @@ body{
 .carousel-item{
 
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   
 
   
+}
+.carousel-inner{
+  width: 100vw;
+  height: 90vh;
 }
 
 .textOverlay{
@@ -87,7 +93,7 @@ body{
 
 
 .carousel-item img {
-  height: 100vh; 
+  height: 90vh; 
   width: 100vw;
   overflow:hidden;
   object-fit: fill;
@@ -116,11 +122,11 @@ body{
 
 
 .navbar-custom * {
-  color:rgb(24, 168, 187);
+  color:rgb(24, 168, 187) !important;
  
 }
 .navbar-custom {
-  border-bottom: 1px solid rgb(24, 168, 187);
+  border-bottom: 1px solid rgb(24, 168, 187) !important;
  
 }
 
@@ -141,7 +147,7 @@ body{
 
 .dropdown:hover .dropdown-menu {
  
-  display: block;
+  /* display: block; */
  
 }
 

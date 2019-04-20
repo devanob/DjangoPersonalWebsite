@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 <section class = "sectionPage  mb-0" id = "projectSection">
-        <div class="container addCustom shadow p-3 mb-5 bg-white rounded">
+        <div class="container-fluid addCustom shadow p-3 mb-5 bg-white rounded">
             <h1 class="text-center text-uppercase ">Quick Project</h1>
             <hr class="star-dark mb-5">
             <h3 class="text-center text-uppercase ">Personal's Latest Projects</h3>
@@ -20,9 +20,9 @@
                         </div>
                         <div class="card-body">
                           <div class="innerBody">
-                            <p class="card-title">
+                            <h2 class="card-title">
                             <a href="{{ project.project_link }}" >{{project.projectName}} </a>
-                            </p>
+                            </h2>
                             <p class="card-text"?> {{ project.description }}</p>
                             <p class="card-text"?><time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time></p>
                             <p class="btn btn-outline-primary" href="{{ project.project_link }}">Github
@@ -36,7 +36,7 @@
                   {% endfor %}
             </div>
             <div class="row center justify-content-center">
-                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects Or Look Below
+                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>

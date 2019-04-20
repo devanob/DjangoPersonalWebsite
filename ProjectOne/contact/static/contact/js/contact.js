@@ -55,7 +55,34 @@ let SendData =  (urlLink, data, errorCode, requestHeader)=>{
         xhr.send(stringifyData);
     });
 }
+let addError = (err)=>{
+    let mssgError = document.getElementById("messages");
+    mssgError.classList = "";
+    mssgError.classList.add("ErrorBox");
+    Object.keys(err).forEach(key=>{
+       let list = document.createElement("ul");
+       for (let i = 0 ; i < err[key].length; i++){
+            let listItem = document.createElement("li");
+            listItem.innerText = err[key][i];
+            list.appendChild(listItem);
+       }
+       mssgError.appendChild(list);
+    });
+        
 
+}
+
+let addSuccess = (success)=>{
+    let successBox = document.getElementById("messages");
+    successBox.classList = "";
+    successBox.classList.add("alert");
+    successBox.classList.add("alert-success");
+    let successMssg = document.createElement("p");
+    successMssg.innerText = "Message Sent";
+    successBox.appendChild(successMssg);
+
+}
+  
 document.addEventListener('DOMContentLoaded', ()=>{
     let form = document.getElementById('contactForm')
     form.addEventListener("submit",(event)=>{
@@ -66,9 +93,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
         requestListheader.push(["X-CSRFToken", getCookie('csrftoken')]);
         console.log(formDat);
         SendData("/home/",formDat, 341,requestListheader).then(reponse=>{
-            console.log(reponse);
+            addSuccess(reponse);
         }).catch(error=>{
-            console.log(error);
+            addError(error);
         });
     })
 

@@ -13,4 +13,8 @@ class projectAdmin(admin.ModelAdmin):
     form = projectAdminForm
     list_display = ['projectName','last_updated', 'projectHandlier',]
 
+
+from django.contrib.auth.models import Permission 
+
+admin.site.register(Permission)
 admin.site.register(Project, projectAdmin)

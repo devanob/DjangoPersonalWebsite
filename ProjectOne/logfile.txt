@@ -218,3 +218,64 @@
 [11/Apr/2019 03:48:43] INFO [ProjectOne:57] None
 [11/Apr/2019 03:48:43] INFO [ProjectOne:57] C++ Generic C++ ThreadPool Implementation. Good For Non Blocking Task. Work In Progress
 [11/Apr/2019 03:48:43] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A MiniMax.
+[14/Apr/2019 05:11:18] INFO [ProjectOne:13] Projects OF User Update: DevanoBrown
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:49] Sucess Getting Project
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] These is a project consisting of various search methods used in an n*n slide puzzle written in C++
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] DjangoPersonalWebsite
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. This  Will Be Updated Or Another With Repository For OpenGl 4+
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] None
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] C++ Generic C++ ThreadPool Implementation. Good For Non Blocking Task. Work In Progress
+[14/Apr/2019 05:11:19] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A MiniMax.
+[16/Apr/2019 02:57:25] INFO [ProjectOne:13] Projects OF User Update: DevanoBrown
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:49] Sucess Getting Project
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] These is a project consisting of various search methods used in an n*n slide puzzle written in C++
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] DjangoPersonalWebsite
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. This  Will Be Updated Or Another With Repository For OpenGl 4+
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] None
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] C++ Generic C++ ThreadPool Implementation. Good For Non Blocking Task. Work In Progress
+[16/Apr/2019 02:57:26] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A MiniMax.
+[20/Apr/2019 13:41:26] INFO [ProjectOne:20] Projects OF User Update: DevanoBrown
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:49] Sucess Getting Project
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] These is a project consisting of various search methods used in an n*n slide puzzle written in C++
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] DjangoPersonalWebsite
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. This  Will Be Updated Or Another With Repository For OpenGl 4+
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] None
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] C++ Generic C++ ThreadPool Implementation. Good For Non Blocking Task. Work In Progress
+[20/Apr/2019 13:41:27] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A MiniMax.
