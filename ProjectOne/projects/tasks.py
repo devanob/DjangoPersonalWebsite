@@ -69,5 +69,6 @@ def generateProjects(userModelString):
 		)
 		if project.last_updated != repo['updated_at'] :
 			project.last_updated = repo['updated_at'] 
+			project.description = repo['description'] 
 			project.save()
 	

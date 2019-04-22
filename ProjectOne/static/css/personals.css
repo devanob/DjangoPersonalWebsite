@@ -8,7 +8,7 @@
 
 
  body {
-  background-color: rgba(24, 168, 187, 0.157);
+  background-color: rgba(24, 168, 187, 0.096);
  }
 
 .carousel-item {
@@ -43,14 +43,14 @@
 .carousel-item{
 
   width: 100vw;
-  height: 90vh;
+  height: 95vh;
   
 
   
 }
 .carousel-inner{
   width: 100vw;
-  height: 90vh;
+  height: 95vh;
 }
 
 .textOverlay{
@@ -78,11 +78,11 @@
 
 
 .carousel-caption {
-    opacity: 0.80;
-    max-width: 100%;
+    min-width: 100%;
     width:100%;
-    background-color: #4286d4;
+    background-color: #4286d431;
     left: 0;
+    padding: 5%;
 }
 
 .row{
@@ -93,7 +93,7 @@
 
 
 .carousel-item img {
-  height: 90vh; 
+  height: 95vh; 
   width: 100vw;
   overflow:hidden;
   object-fit: fill;

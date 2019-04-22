@@ -53,8 +53,8 @@ let setViewAvaibility = (element)=>{
 }
 
 let loadNav = ()=>{
-  document.addEventListener("DOMContentLoaded", () =>{
     let allViewable = document.getElementsByClassName("viewables");
+    console.log(allViewable);
     for (let i = 0 ; i < allViewable.length; i++){
       if(setViewAvaibility(allViewable[i])){
         return; // if any viewable item is in the view port then return 
@@ -65,8 +65,7 @@ let loadNav = ()=>{
     navibar.classList.add("bg-dark");
     navibar.classList.remove("navbar-custom");
     
-;
-});
+
 
 }
 
@@ -79,7 +78,6 @@ else{
 
   loadNav()
 }
-document.addEventListener('DOMContentLoaded',loadNav );
 //Nav Bar Interaction 
 var prevScrollpos = window.pageYOffset;
 let hideNavScroll =()=>{

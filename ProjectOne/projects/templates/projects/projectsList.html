@@ -64,7 +64,7 @@
         {% for page_item  in current_page %}
       
         <div class="row projectRow align-items-center">
-          <div class="col-md-6" >
+          <div class="col-xs-6 col-sm-6 col-lg-6" >
             <a href="#">
               <img class="img-fluid rounded mb-3 mb-md-0 row-eq-height" 
               {% if page_item.project_image %}
@@ -73,7 +73,8 @@
               alt="">
             </a>
           </div>
-          <div class="col-md-6">
+          <div class="col-xs-6 col-sm-6 col-lg-6">
+            <div class= "projectContent">
             <h3 title="{{page_item.projectName}}">{{page_item.projectName}}</h3>
             <p>{{page_item.description}}</p>
             <p>Last Update:
@@ -83,7 +84,9 @@
               <time class="timeLocal" utcTime='{{page_item.created|date:"c"}}'>{{page_item.created|date:"c"}}</time> 
             </p>
             
-            <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
+            
+          </div>
+          <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
               <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
           </div>
