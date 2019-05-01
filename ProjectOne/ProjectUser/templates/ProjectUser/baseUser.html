@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+{% block navbrandLink %}
+{% url 'home' %}
+{% endblock %}
+
+{% block extraJS %}
+{% endblock %}
+
+{% block customCSS %}
+<link href="{% static 'ProjectUser/css/authPage.css'%}" rel="stylesheet">
+{% endblock %}
+   
+
+

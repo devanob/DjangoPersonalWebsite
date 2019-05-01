@@ -3,7 +3,7 @@
     <div class="container-fluid shadow p-3 mb-5 bg-white rounded text-center text-uppercase" >
       <h1 class="text-center text-uppercase ">Contact</h1>
       <hr class="star-dark mb-5">
-      <form name="sentMessage" id="contactForm" method="post" >
+      <form name="sentMessage" id="contactForm" method="post" action="{% url 'contactForm' %}">
         {% csrf_token %}
         <div id="messages">
           

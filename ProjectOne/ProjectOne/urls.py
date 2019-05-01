@@ -21,6 +21,8 @@ from .views import redirectHome
 from HomePage.urls import urlpatterns as HomeURL
 from about.urls  import urlpatterns as aboutURL
 from projects.urls import urlpatterns as projectsURL
+from contact.urls import urlpatterns as contactsURL
+from ProjectUser.urls import urlpatterns as ProjectUserURL
 
 #Organizer Urls
 urlpatterns = [
@@ -29,7 +31,8 @@ urlpatterns = [
     path(r'home/', include( HomeURL) ),
     path(r'about/', include(aboutURL) ),
     path(r'projects/', include(projectsURL) ),
-
+    path(r'contacts/', include(contactsURL) ),
+    path(r'user/', include(ProjectUserURL)),
 ]
 from django.conf import settings
 

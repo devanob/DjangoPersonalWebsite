@@ -86,6 +86,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ProjectOne.wsgi.application'
 
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -219,3 +220,4 @@ PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.MD5PasswordHasher',
     'django.contrib.auth.hashers.CryptPasswordHasher',
 )
+LOGIN_REDIRECT_URL = 'home'

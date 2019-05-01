@@ -21,10 +21,12 @@
     
     <link rel="shortcut icon" href="{% static 'img/favicon/favicon.svg' %}"/>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="{% static 'css/personals.css' %}" rel="stylesheet">
+    <link href="{% static 'css/generalNavBar.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/buttonStyling.css' %}" rel="stylesheet">
     
     {% block customCSS %}
     <!-- //Custom CSS FOR APPS -->
@@ -48,8 +50,7 @@
             <img id= "Dbrand" src="{% static 'img/logo/naviconBrand.svg' %}" width="50" height="50" alt="">
           Devano's Personal
         </a> <!---Header Funciton-->
-
-        <button class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button id= "buttonMenu" class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon" ></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -73,8 +74,29 @@
               <a class="nav-link btn font-weight-bold  js-scroll-trigger" href="#contactPage">
               Contact</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="logIn nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    Welcome {{user}}
+              </a>
+              
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuUser">
+                    <a class="dropdown-item " href="">Settings</a>
+                    <a class="dropdown-item " href="{% url 'logout'%}">SignOut</a>
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'login'%}">Login</a>
+            </li>
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'logout'%}">Signup</a>
+            </li>
+            {% endif %}
            
-            <li class="nav-item dropdown"> <!--Blog Header Here-->
+           
+            {% comment %} <li class="nav-item dropdown"> <!--Blog Header Here-->
               <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="navbarDropdownBlog" 
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Blog
@@ -83,13 +105,14 @@
                 <a class="dropdown-item" href="">Tech Blog</a>
                 <a class="dropdown-item" href="">CS Blog</a>
               </div>
-            </li>
+            </li> {% endcomment %}
             
            
           </ul>
           {% endblock %}
         
         </div>
+        
       </div>
     </nav>
 

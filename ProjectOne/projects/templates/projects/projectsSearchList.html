@@ -71,20 +71,23 @@
               alt="">
             </a>
           </div>
-          <div class="col-md-6">
-            <h3 title="{{page_item.projectName}}">{{page_item.projectName}}</h3>
-            <p>{{page_item.description}}</p>
-            <p>Last Update:
-              <time class="timeLocal" utcTime='{{page_item.last_updated|date:"c"}}'>{{page_item.last_updated|date:"c"}}</time> 
-            </p>
-            <p>Date Created:
-              <time class="timeLocal" utcTime='{{page_item.created|date:"c"}}'>{{page_item.created|date:"c"}}</time> 
-            </p>
-            
+          <div class="col-xs-6 col-sm-6 col-lg-6">
+              <div class= "projectContent">
+              <h3 title="{{page_item.projectName}}">{{page_item.projectName}}</h3>
+              <p>{{page_item.description}}</p>
+              <p>Last Update:
+                <time class="timeLocal" utcTime='{{page_item.last_updated|date:"c"}}'>{{page_item.last_updated|date:"c"}}</time> 
+              </p>
+              <p>Date Created:
+                <time class="timeLocal" utcTime='{{page_item.created|date:"c"}}'>{{page_item.created|date:"c"}}</time> 
+              </p>
+              
+              
+            </div>
             <a class="btn btn-outline-primary" href="{{page_item.project_link}}"> View On GitHub  
-              <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-          </div>
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
         </div>
           <!-- /.row -->
         

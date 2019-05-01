@@ -11,6 +11,8 @@
   background-color: rgba(24, 168, 187, 0.096);
  }
 
+ 
+
 .carousel-item {
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -22,13 +24,16 @@
 
 .sectionPage {
 
-  padding: 5%;
+  padding-top: 5%;
+  padding-right: 1%;
+  padding-bottom: 5%;
+  padding-left: 1%;
   width: 100vw;
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: fill;
-  
+  margin: 0 auto !important;
 }
 
 .headerCarousel{
@@ -98,37 +103,7 @@
   overflow:hidden;
   object-fit: fill;
 }
-.navbar-toggler {
-  
-  border-style: solid;
-  border-width: 1px;
-  border-color: rgb(24, 168, 187);
-  height: 50px !important;
-}
-.navbar-toggle .icon-bar{
-  width: 50px !important;
-  height:3px !important;
-  background-color: rgba(17, 17, 17, 0.548) !important;
-}
-.navbar-wrapper {
-  
-  position:relative;
-}
-.carousel {
-  position:absolute;
-  top:0;
-}
 
-
-
-.navbar-custom * {
-  color:rgb(24, 168, 187) !important;
- 
-}
-.navbar-custom {
-  border-bottom: 1px solid rgb(24, 168, 187) !important;
- 
-}
 
 
 .navi-outline {
@@ -164,27 +139,12 @@
 }
 
 /* animations  */
-.navbar-toggler-icon{
-  background-image: url("/media/img/navbar_img/down-arrow.svg")  !important;
-  
-}
-
-#Dbrand{
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-fill-mode: forwards;
-}
 
 
 
-@keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(360deg);
-  }
-}
+
+
+
 
 #imgAbout{
   height: 60vh;
@@ -194,24 +154,6 @@
 
 }
 
-.navbar { 
- 
-  font-size: xx-large !important;      /* Just because I am using big size font */
-  
-}
-
-.navbar ul li > a:hover{
-  color: white;
-}
-
-.navbar-brand:hover {
-  color: white;
-}
-
-
-#navbarTop{
-  transition: opacity 1.0s !important;  
-}
 
 .bootstrap-select{
   overflow: visible !important;
@@ -222,3 +164,4 @@
    overflow: visible !important;
   z-index:999 !important;
 }
+

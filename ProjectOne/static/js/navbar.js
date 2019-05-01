@@ -14,15 +14,13 @@ let helperScrollEventHandlier = (element)=>{
         headerViewableBefore = true;
         let navibar  = document.getElementById("navbarTop");
         navibar.classList.add("navbar-custom");
-        navibar.classList.remove("navbar-dark");
-        navibar.classList.remove("bg-dark");
+        navibar.classList.remove("navbar-dark-custom", "solid");
         return false;
     }
     else if (!headerViewable && headerViewableBefore == true){ //We'll Need To chnage styling back
         headerViewableBefore = false;
         let navibar  = document.getElementById("navbarTop");
-        navibar.classList.add("navbar-dark");
-        navibar.classList.add("bg-dark");
+        navibar.classList.add("navbar-dark-custom", "solid");
         navibar.classList.remove("navbar-custom");
         return true;
     }
@@ -44,8 +42,7 @@ let setViewAvaibility = (element)=>{
     let isViewable = viewableItem(element);
     if (!isViewable){
         let navibar  = document.getElementById("navbarTop");
-        navibar.classList.add("navbar-dark");
-        navibar.classList.add("bg-dark");
+        navibar.classList.add("navbar-dark-custom", "solid");
         navibar.classList.remove("navbar-custom");
         return false;
     }
@@ -61,8 +58,7 @@ let loadNav = ()=>{
       }
     }
     let navibar  = document.getElementById("navbarTop");
-    navibar.classList.add("navbar-dark");
-    navibar.classList.add("bg-dark");
+    navibar.classList.add("navbar-dark-custom", "solid");
     navibar.classList.remove("navbar-custom");
     
 
@@ -81,11 +77,19 @@ else{
 //Nav Bar Interaction 
 var prevScrollpos = window.pageYOffset;
 let hideNavScroll =()=>{
-    var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbarTop").style.opacity = "1.0";
-  } else {
-    document.getElementById("navbarTop").style.opacity = "0.5";
+  var currentScrollPos = window.pageYOffset;
+  let navibar  = document.getElementById("navbarTop");
+  if (navibar.classList.contains('navbar-dark-custom')){
+    if (prevScrollpos > currentScrollPos) {
+      
+      navibar.classList.add("solid");
+      navibar.classList.remove("light");
+      
+    } else {
+      navibar.classList.add("light");
+      navibar.classList.remove("solid");
+      
+    }
   }
   prevScrollpos = currentScrollPos;
 }

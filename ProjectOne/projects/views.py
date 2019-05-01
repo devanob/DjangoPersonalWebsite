@@ -71,13 +71,3 @@ class SearchProjects(ListView):
         # Add in the publisher
         context['formSearch'] = self.formSearch
         return context
-    # def get(self,request,pageNum):
-    #     # print(self.request)
-    #     # print(self.args)
-    #     # print(self.kwargs)
-    #     fromSearch = SearchProjectForm(request.GET)
-    #     print(request.GET.urlencode())
-    #     if fromSearch.is_valid():
-    #         print(fromSearch.generateSearchQuery())
-    #         print(fromSearch.cleaned_data)
-    #     return HttpResponse("Still In Development")
