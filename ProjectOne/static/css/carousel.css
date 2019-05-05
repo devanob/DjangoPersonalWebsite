@@ -1,0 +1,21 @@
+.carousel-control-icon-custom{
+    width: 100%;
+    height: 100%;
+}
+.nav-icon-out{
+    height:5em;
+    width: 5em;
+    padding:1em;
+    border-radius: 50%;
+    border: 0.1em solid rgb(24, 168, 187) ;
+    transition: all 0.5s;
+}
+
+.nav-icon-out:hover{
+    background-color: rgb(24, 168, 187) ;
+    position: relative;
+    top: -0.5em;
+}
+
+
+

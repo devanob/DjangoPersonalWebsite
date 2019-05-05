@@ -5,6 +5,7 @@
 {% block customCSS %}
 <link href="{% static 'projects/css/quickProject.css' %}" rel="stylesheet">
 <link href="{% static 'contact/css/contact.css' %}" rel="stylesheet">
+<link href="{% static 'css/carousel.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block title %}
@@ -58,11 +59,15 @@
         </div>
 
         <a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
-          <h1 class="carousel-control-prev-icon" ></h1>
+          <div class="nav-icon-out">
+            <h1 class="carousel-control-prev-icon carousel-control-icon-custom" ></h1>
+          </div>
           <span class="sr-only">Previous</span>
         </a>
         <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
-          <h1 class="carousel-control-next-icon" ></h1>
+        <div class="nav-icon-out">
+          <h1 class="carousel-control-next-icon carousel-control-icon-custom" ></h1>
+        </div>
           <span class="sr-only">Next</span>
         </a>
       
