@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["devano.tk"]
+ALLOWED_HOSTS = ["devanobrown.tech","www.devanobrown.tech"]
 AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
 CELERY_BROKER_URL = 'pyamqp://localhost'
@@ -34,11 +34,12 @@ CELERY_BROKER_URL = 'pyamqp://localhost'
 
 #MEDIA URL AND ROOT
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = 'https://devanobrown.tech/media/'
 
-MEDIA_URL = '/media/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'rest_framework',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -67,6 +68,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'ProjectOne.urls'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True 
 
 TEMPLATES = [
     {
@@ -106,7 +109,7 @@ DATABASES = {
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static"),
 ]
 
 
@@ -149,6 +152,7 @@ USE_TZ = True
 ##
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticFile/')
 import logging 
 
 ##User Authentication 
@@ -220,4 +224,4 @@ PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.MD5PasswordHasher',
     'django.contrib.auth.hashers.CryptPasswordHasher',
 )
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = ''

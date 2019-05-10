@@ -27,8 +27,7 @@ from ProjectUser.urls import urlpatterns as ProjectUserURL
 #Organizer Urls
 urlpatterns = [
     path('personals-admin/', admin.site.urls),
-    path(r'', redirectHome ),
-    path(r'home/', include( HomeURL) ),
+    path(r'', include( HomeURL) ),
     path(r'about/', include(aboutURL) ),
     path(r'projects/', include(projectsURL) ),
     path(r'contacts/', include(contactsURL) ),

@@ -13,6 +13,8 @@ celery = "*"
 django-celery-beat = "*"
 pillow = "*"
 bcrypt = "*"
+djangorestframework = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"

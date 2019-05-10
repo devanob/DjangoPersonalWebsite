@@ -16,6 +16,7 @@
 <script src="{% static 'js/scrolling-nav.js' %}"></script>
 <script src="{% static 'js/time.js' %}"></script>
 <script src="{% static 'contact/js/contact.js' %}"></script>
+<script src="{% static 'js/carousel.js' %}"></script>
 {% endblock %}
 
 
@@ -25,14 +26,14 @@
 <section  class="headerCarousel" id="headerSection">
    
       <div id="carouselHeader" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselHeader" data-slide-to="1"></li>
+        <ol class="carousel-indicators" id='carousel-indicators-id'>
+          {% comment %} <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselHeader" data-slide-to="1"></li> {% endcomment %}
        </ol>
-        <div class="carousel-inner viewables" role="listbox">
+        <div class="carousel-inner viewables" role="listbox" id="carousel-inner-id">
          
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active">
+          {% comment %} <div class="carousel-item active">
             <img 
             {% if latest_project.project_image %}
               src="{{latest_project.project_image.url}}"
@@ -46,14 +47,14 @@
             
               </div>
             </a>
-          </div>
+          </div> {% endcomment %}
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url({% static 'img/img.png' %})">
+          {% comment %} <div class="carousel-item" style="background-image: url({% static 'img/img.png' %})">
             <div class="carousel-caption">
               <h2>Latest Blog Post</h2>
               <p>This is a description for lastest Blog Post</p>
             </div>
-          </div>
+          </div> {% endcomment %}
           <!-- Slide Three - Set the background image for this slide in the line below -->
           
         </div>

@@ -1,0 +1,18 @@
+[05/May/2019 19:21:50] INFO [ProjectOne:49] Sucess Getting Project
+[05/May/2019 19:21:50] INFO [ProjectOne:49] Sucess Getting Project
+[05/May/2019 19:21:50] INFO [ProjectOne:49] Sucess Getting Project
+[05/May/2019 19:21:50] INFO [ProjectOne:49] Sucess Getting Project
+[05/May/2019 19:21:50] INFO [ProjectOne:49] Sucess Getting Project
+[05/May/2019 19:21:50] INFO [ProjectOne:57] These is a project consisting of various search methods used in an n*n slide puzzle written in C++
+[05/May/2019 19:21:50] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal. This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
+[05/May/2019 19:21:50] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. This  Will Be Updated Or Another With Repository For OpenGl 4+
+[05/May/2019 19:21:50] INFO [ProjectOne:57] None
+[05/May/2019 19:21:50] INFO [ProjectOne:57] Naive Bayesian Classifier Implementation Using Python And SQL (MYSQL). 
+[05/May/2019 19:21:50] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
+[05/May/2019 19:21:50] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
+[05/May/2019 19:21:50] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[05/May/2019 19:21:50] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[05/May/2019 19:21:50] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[05/May/2019 19:21:50] INFO [ProjectOne:57] None
+[05/May/2019 19:21:50] INFO [ProjectOne:57] C++ Generic C++ ThreadPool Implementation. Good For Non Blocking Task. Work In Progress
+[05/May/2019 19:21:50] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A MiniMax.

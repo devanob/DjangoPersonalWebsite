@@ -18,10 +18,17 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include, url
 from projects.views import ProjectView, BaseRedirect,SearchProjects
+from .views import ProjectsViewSet, ProjectsViewSetPaginated
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'projects-count/page-count=(?P<page_count>\d+)', ProjectsViewSetPaginated, basename='projects-count')
+router.register(r'allprojects', ProjectsViewSet, basename='projects')
+router.register(r'paginated-projects', ProjectsViewSetPaginated, basename='projects-pagination')
 
 
 urlpatterns = [
     path(r'all-projects/page=<int:pageNum>/', ProjectView.as_view(), name = "allProjects"),
     path(r'search/page=<int:pageNum>/',SearchProjects.as_view(), name = "searchProject"),
-    re_path(r'.*',BaseRedirect.as_view() ),
+    path(r'api-projects/', include(router.urls)),
 ]

@@ -1,0 +1,13 @@
+.ErrorBox{
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+.SucessBox{
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+
