@@ -60,7 +60,6 @@ let loadNav = ()=>{
     let navibar  = document.getElementById("navbarTop");
     navibar.classList.add("navbar-dark-custom", "solid");
     navibar.classList.remove("navbar-custom");
-    $(window).scrollTop(0);
     
 
 

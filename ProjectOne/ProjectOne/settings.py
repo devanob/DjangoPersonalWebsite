@@ -9,9 +9,11 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
-
+import json
 import os
-
+##read hidden setting json 
+with open('/home/devano/PythonDjango/MainSiteSettings/appSetting.json') as json_setting:  
+    SETTINGS_JSON = json.load(json_setting)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bhg&+da@bx)1l+2%1y8f#ck*p!as)c9)9zw(qn$(26x)(=)a&8'
+SECRET_KEY = SETTINGS_JSON['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -29,7 +31,7 @@ DEBUG = False
 ALLOWED_HOSTS = ["devanobrown.tech","www.devanobrown.tech"]
 AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
-CELERY_BROKER_URL = 'pyamqp://localhost'
+CELERY_BROKER_URL = SETTINGS_JSON['CELERY_BROKER_URL']
 # Application definition
 
 #MEDIA URL AND ROOT
@@ -97,9 +99,9 @@ AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBacke
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'Personals',
-        'USER': 'DevanoBrown',
-        'PASSWORD': '1101110113devanobrown',
+        'NAME': SETTINGS_JSON['DataBase.NAME'],
+        'USER': SETTINGS_JSON['DataBase.USER'],
+        'PASSWORD': SETTINGS_JSON['DataBase.PASSWORD'],
         'OPTIONS':{ 'charset': 'utf8mb4',
                     'use_unicode': True,
         
@@ -224,4 +226,4 @@ PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.MD5PasswordHasher',
     'django.contrib.auth.hashers.CryptPasswordHasher',
 )
-LOGIN_REDIRECT_URL = ''
+LOGIN_REDIRECT_URL = 'home'

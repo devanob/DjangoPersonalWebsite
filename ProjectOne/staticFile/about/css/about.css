@@ -1,0 +1,12 @@
+.skill-icon{
+    color: #444;
+    display: inline-block;
+    font-size: 4.0em;
+    line-height: 36px;
+    margin-bottom: 20px;
+    transition: all 0.1s ease;
+}
+
+.skill-icon:hover{
+    color: rgb(24, 168, 187);
+}

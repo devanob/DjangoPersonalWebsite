@@ -7,24 +7,100 @@
         <hr class="star-dark mb-5">
       
         <!-- Intro Content -->
-        <div class="row " >
+        <div class="row" >
           <div class="col-lg-6">
-            <img class="img-fluid rounded mb-4" id="imgAbout" src="{% static 'about/webdev.gif' %}"  alt="">
+              {% comment %} <img class="img-fluid rounded mb-4" id="imgAbout" src="{% static 'about/webdev.gif' %}"  alt=""> {% endcomment %}
+              <video class="img-fluid rounded mb-4" autoplay loop muted playsinline id="imgAbout" src="{% static 'about/web.webm' %}" type="video/webm"> 
+              </video>
           </div>
-          <div class="col-lg-6" id= "SubAboutSection">
-            <h2>About  Personal</h2>
-            <p><strong>
+        <div class="col-lg-6" id= "SubAboutSection">
+          <div>
+            <h2>About This Site, Personal And Me </h2>
+            <p>
                 Starting  As A Small Project Single Page. Personal, I Like To Call
-                 Showcase Aspects Of Me From  My Love 
+                Showcase Aspects Of Me From  My Love 
                 C/C++ To Artificial Intelligence To My Love Of Python to 
                 My Ventures Into Web Development.  Personal Is Supported 
                 By Django On Our ServerSide. Next, We Have HTML, JavaScript, CSS 
-                 Powering Our Front End. Finally, Hosted In The Cloud With The 
-                 Help Of Google Cloud And Ngnix
-                </strong>  
+                Powering Our Front End. Finally, Hosted In The Cloud With The 
+                Help Of Google Cloud And Ngnix  
             </p>
           </div>
+          <div  class="container">
+            <!--Row 1-->
+            <div class="row">
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="Python"> 
+                  <i class="fab fa-python"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="Java"> 
+                  <i class="fab fa-java"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="Javascript"> 
+                  <i class="fab fa-js"></i>
+                </div>
+              </div>
+            </div>
+            <!--Row 2-->
+            <div class="row">
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="HTML5"> 
+                  <i class="fab fa-html5"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="CSS3"> 
+                  <i class="fab fa-css3"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="C/C++"> 
+                  <i class="devicon-cplusplus-plain"></i>
+                </div>
+              </div>
+            </div>
+            <!--Row 3-->
+            <div class="row">
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="Nodejs"> 
+                  <i class="devicon-nodejs-plain"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="Django"> 
+                  <i class="devicon-django-plain"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon"data-toggle="tooltip" data-placement="top" title="React"> 
+                  <i class="devicon-react-original"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4"> 
+                <div class="skill-icon" data-toggle="tooltip" data-placement="top" title="SQL/MYSQL"> 
+                  <i class="devicon-mysql-plain"></i>
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon"> 
+                  
+                </div>
+              </div>
+              <div class="col-lg-4"> 
+                <div class="skill-icon"> 
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        
         </div>
       </div>
-
+    </div>
 </section>

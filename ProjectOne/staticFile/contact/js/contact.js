@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let requestListheader = [];
         requestListheader.push(["X-CSRFToken", getCookie('csrftoken')]);
         console.log(formDat);
-        SendData("/home/",formDat, 341,requestListheader).then(reponse=>{
+        SendData("/contacts/contactForm/",formDat, 341,requestListheader).then(reponse=>{
             addSuccess(reponse);
         }).catch(error=>{
             addError(error);
