@@ -31,9 +31,10 @@ DEBUG = False
 ALLOWED_HOSTS = ["devanobrown.tech","www.devanobrown.tech"]
 AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
+print(SETTINGS_JSON['CELERY_BROKER_URL'])
 CELERY_BROKER_URL = SETTINGS_JSON['CELERY_BROKER_URL']
 # Application definition
-
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
 #MEDIA URL AND ROOT
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = 'https://devanobrown.tech/media/'

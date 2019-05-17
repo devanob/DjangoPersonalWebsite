@@ -60,7 +60,6 @@ let porjectInsert =(projectArray) =>{
         var img = new Image();
         inner_item.appendChild(img);
         img.src=project.project_image;
-        console.log(img);
         img.alt=project.projectName;
         img.className="img-fluid";
         //project-img-end
