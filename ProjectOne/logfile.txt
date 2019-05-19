@@ -1,172 +1,35 @@
-[16/May/2019 21:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[16/May/2019 21:01:00] INFO [ProjectOne:57] None
-[16/May/2019 21:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[16/May/2019 21:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 22:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[16/May/2019 22:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[16/May/2019 22:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[16/May/2019 22:01:00] INFO [ProjectOne:57] None
-[16/May/2019 22:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[16/May/2019 22:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[16/May/2019 22:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[16/May/2019 22:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[16/May/2019 22:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[16/May/2019 22:01:00] INFO [ProjectOne:57] None
-[16/May/2019 22:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[16/May/2019 22:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[16/May/2019 23:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[16/May/2019 23:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[16/May/2019 23:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[16/May/2019 23:01:00] INFO [ProjectOne:57] None
-[16/May/2019 23:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[16/May/2019 23:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[16/May/2019 23:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[16/May/2019 23:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[16/May/2019 23:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[16/May/2019 23:01:00] INFO [ProjectOne:57] None
-[16/May/2019 23:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[16/May/2019 23:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 00:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[17/May/2019 00:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[17/May/2019 00:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[17/May/2019 00:01:00] INFO [ProjectOne:57] None
-[17/May/2019 00:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[17/May/2019 00:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[17/May/2019 00:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[17/May/2019 00:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[17/May/2019 00:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[17/May/2019 00:01:00] INFO [ProjectOne:57] None
-[17/May/2019 00:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[17/May/2019 00:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 01:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[17/May/2019 01:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[17/May/2019 01:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[17/May/2019 01:01:00] INFO [ProjectOne:57] None
-[17/May/2019 01:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[17/May/2019 01:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[17/May/2019 01:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[17/May/2019 01:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[17/May/2019 01:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[17/May/2019 01:01:00] INFO [ProjectOne:57] None
-[17/May/2019 01:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[17/May/2019 01:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 02:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[17/May/2019 02:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[17/May/2019 02:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[17/May/2019 02:01:00] INFO [ProjectOne:57] None
-[17/May/2019 02:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[17/May/2019 02:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[17/May/2019 02:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[17/May/2019 02:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[17/May/2019 02:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[17/May/2019 02:01:00] INFO [ProjectOne:57] None
-[17/May/2019 02:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[17/May/2019 02:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 03:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[17/May/2019 03:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[17/May/2019 03:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[17/May/2019 03:01:00] INFO [ProjectOne:57] None
-[17/May/2019 03:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[17/May/2019 03:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[17/May/2019 03:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[17/May/2019 03:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[17/May/2019 03:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[17/May/2019 03:01:00] INFO [ProjectOne:57] None
-[17/May/2019 03:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[17/May/2019 03:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:49] Sucess Getting Project
-[17/May/2019 04:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
-[17/May/2019 04:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
-[17/May/2019 04:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
-[17/May/2019 04:01:00] INFO [ProjectOne:57] None
-[17/May/2019 04:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
-[17/May/2019 04:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
-[17/May/2019 04:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
-[17/May/2019 04:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
-[17/May/2019 04:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
-[17/May/2019 04:01:00] INFO [ProjectOne:57] None
-[17/May/2019 04:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
-[17/May/2019 04:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
+[19/May/2019 16:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
+[19/May/2019 16:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
+[19/May/2019 16:01:00] INFO [ProjectOne:57] None
+[19/May/2019 16:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
+[19/May/2019 16:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
+[19/May/2019 16:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[19/May/2019 16:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[19/May/2019 16:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[19/May/2019 16:01:00] INFO [ProjectOne:57] None
+[19/May/2019 16:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
+[19/May/2019 16:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:49] Sucess Getting Project
+[19/May/2019 17:01:00] INFO [ProjectOne:57] A C++ Project Showcasing Various Search Algorithms To Solve A N X N Slide Puzzle. 
+[19/May/2019 17:01:00] INFO [ProjectOne:57] #Django Personal Website  This Is The Source Code For Personal(MYWebsite). This Site Is Primary Written In HTML and Javascript With Helping Libraries Such As Bootstrap And JQuery  .The Back End Is Written In Django With A MySql Backing.
+[19/May/2019 17:01:00] INFO [ProjectOne:57] This is Fight Simulator written in C++ and OpenGl. Uses 2D Perlin Noise Implementation For Mountain Generation
+[19/May/2019 17:01:00] INFO [ProjectOne:57] None
+[19/May/2019 17:01:00] INFO [ProjectOne:57] Naive Bayesian Classifier Using Python And SQL(MYSQL)
+[19/May/2019 17:01:00] INFO [ProjectOne:57] This outlines the design and development of the Implementation for the RAG based Deadlock Detection algorithm using the multiple processess. The program was written in C++. The program uses multi-processes to check whether the trains(processes) are stuck in a deadlock(multiple processes trying to access the cpu resourses at the same time). The program involves the use of semaphores(locks) to protect the processes so that no other process can try to alter the resourse managment.
+[19/May/2019 17:01:00] INFO [ProjectOne:57] This Web Application Written Node.Js, Front End Javascript, CSS, HMTL, JQuery. Single Page App. This application was written For  NorthWood Client As Part As An OpenSource Application. Feature Real Time Messaging, Memos, Live Event Handier, Relaxation. This Application was created with the elderly in mind. With Block Text, Static Non-Flashing Colours. Styling Can Easily Be Overrided With  Css 
+[19/May/2019 17:01:00] INFO [ProjectOne:57] Save And Retrieves Data From SMU Web Server 
+[19/May/2019 17:01:00] INFO [ProjectOne:57] System Secuirty Using Node Js To Spoof User Queries
+[19/May/2019 17:01:00] INFO [ProjectOne:57] None
+[19/May/2019 17:01:00] INFO [ProjectOne:57] C++ Generic ThreadPool Implementation. Good For Non Blocking Tasks. Work In Progress
+[19/May/2019 17:01:00] INFO [ProjectOne:57] Making An A.I System For Tic Tac Toe. This Was Implementing A Mini-Max Algorithm As Part Of A Game Theory Project

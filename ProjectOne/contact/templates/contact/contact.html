@@ -3,33 +3,38 @@
     <div class="container-fluid shadow p-3 mb-5 bg-white rounded text-center text-uppercase" >
       <h1 class="text-center text-uppercase ">Contact</h1>
       <hr class="star-dark mb-5">
-      <form name="sentMessage" id="contactForm" method="post" action="{% url 'contactForm' %}">
-        {% csrf_token %}
-        <div id="messages">
-          
-        </div> <!--Message Message SenT For Denied-->
-        <div class="form-row form-group" > 
-          <div class="col-xs-4 col-sm-4 col-lg-4">
-            <label for="{{ form.contact_name.id_for_label }}">Name</label>
-            {{form.contact_name}}
-          </div>
-          <div class="col-xs-4 col-sm-4 col-lg-4">
-            <label for="{{ form.contact_email.id_for_label }}">Email</label>
-            {{form.contact_email}}
-          </div>
-          <div class="col-xs-4 col-sm-4 col-lg-4">
-          <label for="{{ form.contact_phone_number.id_for_label }}">Phone Number</label>
-          {{form.contact_phone_number}}
-          </div>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-lg-6"> </div>
+        <div class="col-xs-6 col-sm-6 col-lg-6">
+          <form name="sentMessage" id="contactForm" method="post" action="{% url 'contactForm' %}">
+            {% csrf_token %}
+            <div id="messages">
+              
+            </div> <!--Message Message SenT For Denied-->
+            <div class="form-row form-group" > 
+              <div class="col-xs-4 col-sm-4 col-lg-4">
+                <label for="{{ form.contact_name.id_for_label }}">Name</label>
+                {{form.contact_name}}
+              </div>
+              <div class="col-xs-4 col-sm-4 col-lg-4">
+                <label for="{{ form.contact_email.id_for_label }}">Email</label>
+                {{form.contact_email}}
+              </div>
+              <div class="col-xs-4 col-sm-4 col-lg-4">
+              <label for="{{ form.contact_phone_number.id_for_label }}">Phone Number</label>
+              {{form.contact_phone_number}}
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="{{ form.contact_message.id_for_label }}">Message</label>
+              {{form.contact_message}}
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            
+          </form>
         </div>
-        
-         <div class="form-group">
-          <label for="{{ form.contact_message.id_for_label }}">Message</label>
-          {{form.contact_message}}
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-         
-      </form>
+      </div>
       
         <!-- Intro Content -->
     </div>

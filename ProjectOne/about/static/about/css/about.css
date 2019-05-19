@@ -5,6 +5,7 @@
     line-height: 36px;
     margin: 0.25em;
     transition: all 0.1s ease;
+    text-align: center;
 }
 
 .skill-icon:hover{

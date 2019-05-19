@@ -31,7 +31,6 @@ DEBUG = False
 ALLOWED_HOSTS = ["devanobrown.tech","www.devanobrown.tech"]
 AUTH_USER_MODEL = "ProjectUser.ProjectUser"
 STATIC_URL = '/static/'
-print(SETTINGS_JSON['CELERY_BROKER_URL'])
 CELERY_BROKER_URL = SETTINGS_JSON['CELERY_BROKER_URL']
 # Application definition
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
@@ -92,7 +91,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ProjectOne.wsgi.application'
 
-AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend',
+                            'ProjectUser.CustomAuthenicationBackEnd.EmailOrUsernameModelBackend'
+                          ]
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -176,9 +177,17 @@ LOGGING = {
             'class':'logging.NullHandler',
         },
         'logfile': {
-            'level':'DEBUG',
+            'level':'INFO',
             'class':'logging.handlers.RotatingFileHandler',
             'filename': BASE_DIR + "/logfile.txt",
+            'maxBytes': 50000,
+            'backupCount': 2,
+            'formatter': 'standard',
+        },
+        'applogfile': {
+            'level':'INFO',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': BASE_DIR + "/applogfile.txt",
             'maxBytes': 50000,
             'backupCount': 2,
             'formatter': 'standard',
@@ -196,7 +205,7 @@ LOGGING = {
             'level':'WARN',
         },
         'django.db.backends': {
-            'handlers': ['console'],
+            'handlers': ['console','logfile'],
             'level': 'DEBUG',
             'propagate': False,
         },
@@ -208,6 +217,16 @@ LOGGING = {
         'ProjectOne': {
             'handlers': ['console', 'logfile'],
             'level': 'DEBUG',
+        },
+        'about': {
+            'handlers': ['console', 'applogfile'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'ProjectUser': {
+            'handlers': ['console', 'applogfile'],
+            'level': 'DEBUG',
+            'propagate': True,
         },
     }
 }

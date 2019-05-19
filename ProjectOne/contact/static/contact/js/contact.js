@@ -8,6 +8,15 @@ function ConvertFormToJSON(form){
     
     return json;
 }
+/**
+ * 
+ * @param {*} parent - Parent node- all of which children are to be removed
+ */
+let removeChildren = (parent) =>{
+    while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+    }
+}
 function getCookie(name) {
     var cookieValue = null;
     if (document.cookie && document.cookie !== '') {
@@ -57,8 +66,10 @@ let SendData =  (urlLink, data, errorCode, requestHeader)=>{
 }
 let addError = (err)=>{
     let mssgError = document.getElementById("messages");
+    removeChildren(mssgError)
     mssgError.classList = "";
-    mssgError.classList.add("ErrorBox");
+    mssgError.classList.add("alert");
+    mssgError.classList.add("alert-danger");
     Object.keys(err).forEach(key=>{
        let list = document.createElement("ul");
        for (let i = 0 ; i < err[key].length; i++){
@@ -74,6 +85,7 @@ let addError = (err)=>{
 
 let addSuccess = (success)=>{
     let successBox = document.getElementById("messages");
+    removeChildren(successBox)
     successBox.classList = "";
     successBox.classList.add("alert");
     successBox.classList.add("alert-success");

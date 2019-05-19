@@ -20,5 +20,5 @@ from .views import ContactForm
 #Organizer Urls
 ##
 urlpatterns = [
-    path(r'contactForm', ContactForm.as_view(), name = "contactForm"),
+    path(r'contactForm/', ContactForm.as_view(), name = "contactForm"),
 ]

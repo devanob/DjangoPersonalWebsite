@@ -14,7 +14,7 @@
   font-size: 14px;
   text-align: left;
   line-height: 2em;
-  background-color: rgba(24, 168, 187, 0.096);
+  /* background-color: rgba(24, 168, 187, 0.096); */
 }
  
 
@@ -53,14 +53,14 @@
 .carousel-item{
 
   width: 100vw;
-  height: 95vh;
+  height: 98vh;
   
 
   
 }
 .carousel-inner{
   width: 100vw;
-  height: 95vh;
+  height: 98vh;
 }
 
 .textOverlay{
@@ -103,7 +103,7 @@
 
 
 .carousel-item img {
-  height: 95vh; 
+  height: 98vh; 
   width: 100vw;
   overflow:hidden;
   object-fit: fill;

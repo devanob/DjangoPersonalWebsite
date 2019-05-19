@@ -5,7 +5,7 @@ from projects.tasks import generateProjects
 from django.contrib.auth.forms import UserCreationForm
 import logging
 log = logging.getLogger('ProjectOne')
-print(__name__)
+
 
 class UserCreateForm(UserCreationForm):
 
