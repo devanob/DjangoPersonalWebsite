@@ -16,7 +16,6 @@ def getUsers(userModel):
 	try:
 		userProject = ProjectUser.objects.get(username=userModel)
 		gitUser = userProject.gitUser
-		print(gitUser)
 	except Exception:
 		logger.info(traceback.print_exc())
 		logger.info("User Couldnt Not Be Found:{}".format(userModel))
@@ -46,7 +45,7 @@ def getUsers(userModel):
 		repos["updated_at"] = make_aware(datetime.strptime(repos["updated_at"], "%Y-%m-%dT%H:%M:%SZ"))
 		#repos["updated_at"] = repos["updated_at"].strftime('%Y-%m-%d %H:%M:%S+00:00')
 		#print(repos["updated_at"].tzinfo)
-		logger.info("Sucess Getting Project")
+		logger.info("Sucess Getting Project {}".format(key) )
 	#print(currentUserRepos)
 	return currentUserRepos,userProject 
 @shared_task
@@ -54,7 +53,6 @@ def generateProjects(userModelString):
 	listRepos,modelUser = getUsers(userModelString)
 	currentUserProjects = modelUser.projectUserHandlier.all()
 	for key, repo in listRepos.items():
-		logger.info(repo['description'])
 		project, created  = currentUserProjects.get_or_create(
 			projectName = key,
 			defaults={
@@ -67,8 +65,10 @@ def generateProjects(userModelString):
 				'project_image' : None
 				}
 		)
+		print(project)
 		if project.last_updated != repo['updated_at'] :
-			project.last_updated = repo['updated_at'] 
-			project.description = repo['description'] 
-			project.save()
+				##print(project)
+				project.last_updated = repo['updated_at'] 
+				project.description = repo['description'] if repo['description'] is not None else " "
+				project.save()
 	

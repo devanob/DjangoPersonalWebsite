@@ -39,6 +39,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = 'https://devanobrown.tech/media/'
 
 
+
+#email Setttings 
+SENDGRID_API_KEY = SETTINGS_JSON['emailApiKey']
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'rest_framework',
@@ -72,6 +82,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True 
+SECURE_HSTS_SECONDS = 360
 
 TEMPLATES = [
     {
@@ -184,14 +195,6 @@ LOGGING = {
             'backupCount': 2,
             'formatter': 'standard',
         },
-        'applogfile': {
-            'level':'INFO',
-            'class':'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR + "/applogfile.txt",
-            'maxBytes': 50000,
-            'backupCount': 2,
-            'formatter': 'standard',
-        },
         'console':{
             'level':'INFO',
             'class':'logging.StreamHandler',
@@ -205,7 +208,7 @@ LOGGING = {
             'level':'WARN',
         },
         'django.db.backends': {
-            'handlers': ['console','logfile'],
+            'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': False,
         },
@@ -215,19 +218,24 @@ LOGGING = {
             'propagate': True,
         },
         'ProjectOne': {
-            'handlers': ['console', 'logfile'],
+            'handlers': ['console'],
             'level': 'DEBUG',
         },
         'about': {
-            'handlers': ['console', 'applogfile'],
+            'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
         },
         'ProjectUser': {
-            'handlers': ['console', 'applogfile'],
+            'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
         },
+         'contact': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        }
     }
 }
 

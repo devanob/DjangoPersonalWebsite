@@ -5,6 +5,11 @@
             <h1 class="text-center text-uppercase ">Quick Project</h1>
             <hr class="star-dark mb-5">
             <h3 class="text-center text-uppercase ">Personal's Latest Projects</h3>
+            <div class="row center justify-content-center">
+                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
             <div class="row ProjectRow">        
                   {% for project in Projects %}
                     <div class="col-lg-4 customCol">
@@ -34,11 +39,7 @@
                     </div>
                   {% endfor %}
             </div>
-            <div class="row center justify-content-center">
-                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
+            
               
               <!-- Go To The First Page Of All Projects -->
              

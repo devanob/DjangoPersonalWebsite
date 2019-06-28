@@ -10,4 +10,38 @@
   padding: 2%;
 }
 
+.icon-flex-grid {
+  display: flex;
+  list-style-type: none ;
+  margin-top: 25%;
+  width: 100%;
+  justify-content: center;
+}
+
+.icon-flex-grid  > li {
+  width: 50%;
+  height:25%;
+  
+  margin: 1em;
+}
+
+.icon-flex-grid  > li > a {
+  font-size: 5em;
+  color: #444;
+  
+}
+.outterContactIcon{
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-flex-grid  > li > a:hover{
+  color: rgb(24, 168, 187);
+  
+}
+#messages ul {
+  list-style: none;
+}
+
+
 

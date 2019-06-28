@@ -1,8 +1,8 @@
 .skill-icon{
     color: #444;
     display: inline-block;
-    font-size: 4.0em;
-    line-height: 36px;
+    font-size: 3.5em;
+    line-height: 1em;
     margin: 0.25em;
     transition: all 0.1s ease;
     text-align: center;
@@ -10,4 +10,9 @@
 
 .skill-icon:hover{
     color: rgb(24, 168, 187);
+}
+.contactInfo{
+    font-size: 2.5em;
+    line-height: 1.5em;
+    
 }

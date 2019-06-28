@@ -1,9 +1,4 @@
 {
     "python.pythonPath": "/usr/bin/python3",
-    "highlight-matching-tag.leftStyle": {
-        "borderWidth": "0 0 0 3px",
-        "borderStyle": "dotted",
-        "borderColor": "red",
-        "borderRadius": "5px"
-     },
+    "python.formatting.provider": "black",
 }
