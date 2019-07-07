@@ -58,7 +58,10 @@ let porjectInsert =(projectArray) =>{
         }
         //img main slide 
         var img = new Image();
-        inner_item.appendChild(img);
+        var imageContainer = document.createElement('div');
+        imageContainer.className="imageContainer";
+        imageContainer.appendChild(img)
+        inner_item.appendChild(imageContainer);
         img.src=project.project_image;
         img.alt=project.projectName;
         img.className="img-fluid";

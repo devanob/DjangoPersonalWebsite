@@ -19,7 +19,6 @@ class HomePageView(View):
         try:
             projectQuery = Project.objects.all()[:3]
             template_context ={'Projects'  : projectQuery , 
-            "latest_project" : Project.objects.all()[:3][0],
             "form" : ContactClientForm(),
         }
         except:

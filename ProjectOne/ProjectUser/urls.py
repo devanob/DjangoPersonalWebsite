@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
-from .views import CustomLogInView, CustomLogOutView
+from .views import CustomLogInView, CustomLogOutView , CustomSignUpView, ActivateAccount
 ##
 urlpatterns = [
     path(r'login/', CustomLogInView.as_view(), name = "login"),
     path(r'logout/', CustomLogOutView.as_view(), name = "logout"),
+    path(r'signup/', CustomSignUpView.as_view(), name = "signup"),
+    path('activate/<str:uidb64>/<str:token>', ActivateAccount.as_view(), name='activate'),
 ]

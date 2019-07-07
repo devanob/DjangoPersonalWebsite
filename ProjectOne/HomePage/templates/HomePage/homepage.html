@@ -29,36 +29,13 @@
 <section  class="headerCarousel" id="headerSection">
    
       <div id="carouselHeader" class="carousel slide" data-ride="carousel">
+      
         <ol class="carousel-indicators" id='carousel-indicators-id'>
           {% comment %} <li data-target="#carouselHeader" data-slide-to="0" class="active"></li>
           <li data-target="#carouselHeader" data-slide-to="1"></li> {% endcomment %}
        </ol>
         <div class="carousel-inner viewables" role="listbox" id="carousel-inner-id">
          
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          {% comment %} <div class="carousel-item active">
-            <img 
-            {% if latest_project.project_image %}
-              src="{{latest_project.project_image.url}}"
-            {% endif %}
-            class ="img-fluid"  alt="">
-            <a href="">
-              <div class="carousel-caption">
-
-                  <h1>{{latest_project.projectName}}</h1>
-                  <p>{{latest_project.description|truncatewords:"10"}}</p>
-            
-              </div>
-            </a>
-          </div> {% endcomment %}
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          {% comment %} <div class="carousel-item" style="background-image: url({% static 'img/img.png' %})">
-            <div class="carousel-caption">
-              <h2>Latest Blog Post</h2>
-              <p>This is a description for lastest Blog Post</p>
-            </div>
-          </div> {% endcomment %}
-          <!-- Slide Three - Set the background image for this slide in the line below -->
           
         </div>
 

@@ -79,7 +79,11 @@ let addError = (err)=>{
        }
        mssgError.appendChild(list);
     });
-        
+    setTimeout(
+        ()=>{
+            removeChildren(mssgError);
+            mssgError.classList = "";
+        }, 8000);
 
 }
 
@@ -92,6 +96,11 @@ let addSuccess = (success)=>{
     let successMssg = document.createElement("p");
     successMssg.innerText = "Message Sent";
     successBox.appendChild(successMssg);
+    setTimeout(
+        ()=>{
+            removeChildren(successBox);
+            successBox.classList = "";
+        }, 3000);
 
 }
   
@@ -104,9 +113,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
         let requestListheader = [];
         requestListheader.push(["X-CSRFToken", getCookie('csrftoken')]);
         console.log(formDat);
+        document.getElementById("submitContact").disabled = true;
+        setTimeout(
+            function(){
+               document.getElementById("submitContact").disabled = false;
+            }, 2000);
         SendData("/contacts/contactForm/",formDat, 341,requestListheader).then(reponse=>{
+            document.getElementById("submitContact").disabled = false;
+            document.getElementById("contactForm").reset();
             addSuccess(reponse);
+
         }).catch(error=>{
+            document.getElementById("submitContact").disabled = false;
             addError(error);
         });
     })

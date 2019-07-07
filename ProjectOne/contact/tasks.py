@@ -32,7 +32,7 @@ def sendEmail(ContactData):
     else :
         log.info("Sending Email Fail")
     send_mail("New Contact Message", "You Have A Message On your Website", 'DevanoBrownTech@devanobrown.tech', 
-                      ["devanobrown@gmail.com"],
+                      ["browndevano@gmail.com"],
                       fail_silently=False)
 
 

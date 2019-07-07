@@ -1,0 +1,24 @@
+{% extends "ProjectUser/baseUser.html" %}
+
+{% block title %}
+{{block.super}} Personal's LogIn
+{% endblock %}
+
+{% block content %}
+
+
+<section class="sectionPage" id="sectionLogin">
+  <div class="container-fluid addCustom shadow p-3 mb-5 bg-white rounded">
+    <p>Account Created: Please Check Your Email To Comfirm Your Account. Check Your Spam</p>
+    <p>Check The Email: {{ user_email }}</p>
+    <p>Note: Your Account Will Not Be Usable Until You Activate It</p>
+  </div>
+      
+</section>
+ <style> 
+    body {
+    padding-top:10%;
+    }
+  </style>
+    <!-- /.container -->
+{% endblock %}

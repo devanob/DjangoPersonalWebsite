@@ -1,0 +1,24 @@
+<!-- templates/signup.html -->
+{% extends 'base.html' %}
+
+{% block title %}Sign Up{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <div class = "container-fluid text-center addCustom shadow p-3 mb-5 bg-white rounded">
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    {% comment %} {{ form.as_p }} {% endcomment %}
+    <button id = "submit" type="submit" class="btn btn-primary btn-lg">SignUp</button>
+  </form>
+ </div>
+ <style> 
+    body {
+    padding-top:10%;
+    }
+    #submit{
+      margin:1em;
+    }
+  </style>
+{% endblock %}
