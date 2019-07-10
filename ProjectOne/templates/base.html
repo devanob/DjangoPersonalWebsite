@@ -1,3 +1,5 @@
+{% comment %} Load Tags  {% endcomment %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +25,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    
+    {% compress css %}
     <link rel="shortcut icon" href="{% static 'img/favicon/favicon.svg' %}"/>
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/personals.css' %}" rel="stylesheet">
@@ -32,6 +34,7 @@
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/buttonStyling.css' %}" rel="stylesheet">
+    {% endcompress %}
     
     {% block customCSS %}
     <!-- //Custom CSS FOR APPS -->
@@ -187,11 +190,14 @@
 
   
     <!-- Bootstrap core JavaScript CustomScripts -->
+    {% compress js %}
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
     <script src="{% static 'vendor/boostrap_select/js/bootstrap-select.min.js' %}"></script>
+    {% endcompress js %}
+    
     {% block extraJS %}
     <!-- Extra Js Scripts -->
     {% endblock %}

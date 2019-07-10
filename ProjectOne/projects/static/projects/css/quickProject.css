@@ -44,56 +44,27 @@
   }
   
 }
-
-
-
-
-
-
-
-
-hr.star-light,
-hr.star-dark {
-  max-width: 50%;
-  padding: 0;
-  text-align: center;
-  border: none;
-  border-top: solid 0.25rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  margin-left: auto;
-  margin-right: auto;
+#projectSection hr.star-dark {
+  /* border-color: white; */
 }
 
-hr.star-light:after,
-hr.star-dark:after {
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 0.25em;
-  content: "\f108";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
+
+#projectSection hr.star-dark:after {
+  /* color: white; */
+  /* background-color: rgb(53, 185, 147); */
+  content: "\f542";
+  top:-.4em;
+  font-size: 3em;
 }
 
-hr.star-light {
-  border-color: #fff;
-}
 
-hr.star-light:after {
-  color: rgba(255, 255, 255, 0);
-  background-color: #18BC9C;
-}
 
-hr.star-dark {
-  border-color: #2C3E50;
-}
 
-hr.star-dark:after {
-  color: #2C3E50;
-  background-color: white;
-}
+
+
+
+
+
 
 .card-title a {
   color: black;

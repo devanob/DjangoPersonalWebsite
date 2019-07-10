@@ -43,5 +43,17 @@
   list-style: none;
 }
 
+#contactPage hr.star-dark {
+  /* border-color: white; */
+}
+
+
+#contactPage hr.star-dark:after {
+  /* color: white; */
+  /* background-color: rgb(53, 185, 147); */
+  content: "\f2bb";
+  top: -.4em;
+  font-size: 3em;
+}
 
 

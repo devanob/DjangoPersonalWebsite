@@ -16,6 +16,12 @@ bcrypt = "*"
 djangorestframework = "*"
 gunicorn = "*"
 django-crispy-forms = "*"
+django-compressor = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+html5lib = "*"
+slimit = "*"
+brotli = "*"
 
 [requires]
 python_version = "3.6"

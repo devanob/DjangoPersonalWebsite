@@ -112,3 +112,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 })
 
+console.log("Testing Compression3");

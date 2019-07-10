@@ -1,9 +1,16 @@
 {% extends "ProjectUser/baseUser.html" %}
 
 {% block title %}
+{{block.super}} Personal Activate Account
+{% endblock %}
+{% block title %}
 {{block.super}} Personal's LogIn
 {% endblock %}
-
+{% comment %} Page Home Link  {% endcomment %}
+{% block navbrandLink %}
+{% url 'home' %}
+{% endblock %}
+{% block content %}
 {% block content %}
 
 
@@ -12,6 +19,7 @@
     <p>Account Created: Please Check Your Email To Comfirm Your Account. Check Your Spam</p>
     <p>Check The Email: {{ user_email }}</p>
     <p>Note: Your Account Will Not Be Usable Until You Activate It</p>
+    <a href = "{% url 'home' %}"> Go Home </a>
   </div>
       
 </section>

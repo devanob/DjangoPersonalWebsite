@@ -1,33 +1,36 @@
 {% extends "ProjectUser/baseUser.html" %}
-
+{% comment %} Page Title {% endcomment %}
 {% block title %}
 {{block.super}} Personal's LogIn
 {% endblock %}
-
-{% block content %}
+{% comment %} Page Home Link  {% endcomment %}
 {% block navbrandLink %}
-             "#page-top"
-             {% endblock %}
+{% url 'home' %}
+{% endblock %}
+{% block content %}
+
 <section class="sectionPage" id="sectionLogin">
   <div class="container-fluid addCustom shadow p-3 mb-5 bg-white rounded">
-    <form name="login" id="loginForm" method="post">
-        {% csrf_token %}
-        <div id="messages">
-          {{ form.non_field_errors }}
-        </div> <!--Message Message SenT For Denied-->
-        <div class="form-row form-group" > 
-            Email Address/{{ form.username.label_tag }}
-            {{form.username}}
-        </div>
-        <div class="form-row form-group">
-          {{ form.password.label_tag }}
-          {{form.password}}
-        </div>
-         
-          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-        
-        
-      </form>
+    <div contactContainer>
+      <form name="login" id="loginForm" method="post">
+          {% csrf_token %}
+          <div id="messages">
+            {{ form.non_field_errors }}
+          </div> <!--Message Message SenT For Denied-->
+          <div class="form-row form-group" > 
+              Email Address/{{ form.username.label_tag }}
+              {{form.username}}
+          </div>
+          <div class="form-row form-group">
+            {{ form.password.label_tag }}
+            {{form.password}}
+          </div>
+          
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          
+          
+    </form>
+    </div>
   </div>
       
 </section>
