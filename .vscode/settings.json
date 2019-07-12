@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/devano/.local/share/virtualenvs/Django-9qABCoJI/bin/python"
+    "python.pythonPath": "/home/devano/.local/share/virtualenvs/Django-9qABCoJI/bin/python",
+    "python.formatting.provider": "yapf"
 }

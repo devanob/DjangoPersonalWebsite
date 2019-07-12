@@ -33,7 +33,7 @@ class UserAdmin(UseBaseAdmin):
     # These override the definitions on the base UserAdmin
     # that reference specific fields on auth.User.
     actions = [UpdateProjects]
-    list_display = ('email', 'is_staff', 'is_active','gitUser',)
+    list_display = ('email', 'is_staff', 'is_active','gitUser', "uuid")
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
     # overrides get_fieldsets to use this attribute when creating a user.
     search_fields = ('email',)

@@ -50,6 +50,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 INSTALLED_APPS = [
+    'ProjectUser',
     'django.contrib.admin',
     'rest_framework',
     'django.contrib.auth',
@@ -60,7 +61,6 @@ INSTALLED_APPS = [
     'projects',
     'contact',
     'django_celery_beat',
-    'ProjectUser',
     'HomePage',
     'about',
     'blog',

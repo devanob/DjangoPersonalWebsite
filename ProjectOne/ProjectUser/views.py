@@ -40,7 +40,7 @@ class CustomSignUpView(generic.CreateView):
         print(form.cleaned_data["email"])
         context = {"user_email": form.cleaned_data["email"]}
         sign_up_data = form.cleaned_data
-        log.info("User Created : {}",format(sign_up_data['username']))
+        log.info("User Created : {}".format(sign_up_data['username']))
         log.info(type(get_current_site(self.request)))
         sign_up_data["domain"] = get_current_site(self.request).domain
         sendActivationEmail.delay(sign_up_data)

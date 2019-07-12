@@ -17,7 +17,7 @@ class HomePageView(View):
     def get(self,request):
         # get the latest three updated projects
         try:
-            projectQuery = Project.objects.all()[:6]
+            projectQuery = Project.objects.all()[:3]
             template_context ={'Projects'  : projectQuery , 
             "form" : ContactClientForm(),
         }

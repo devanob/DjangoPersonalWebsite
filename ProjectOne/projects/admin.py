@@ -11,7 +11,7 @@ class projectAdminForm(forms.ModelForm):
 
 class projectAdmin(admin.ModelAdmin):
     form = projectAdminForm
-    list_display = ['projectName','last_updated', 'projectHandlier',]
+    list_display = ['projectName','last_updated', 'projectHandlier', 'project_image']
 
 
 from django.contrib.auth.models import Permission 

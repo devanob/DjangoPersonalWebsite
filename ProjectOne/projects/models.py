@@ -14,11 +14,7 @@ from django_extensions.db import fields as extension_fields
 from organizer.models import Tag as ProjectTags
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from ProjectUser.models import ProjectUser as ProjectUserHandlier
-from ProjectOne.settings import STATICFILES_DIRS
-def project_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT/user_STATIC_URL<id>/<filename>
-    return '{}/img/project_img/{}'.format(STATICFILES_DIRS[0],filename)
-    
+ 
 class Project(models.Model):
 
     # Fields
@@ -26,7 +22,6 @@ class Project(models.Model):
     slug = extension_fields.AutoSlugField(populate_from='projectName', blank=True)
     created = models.DateTimeField(verbose_name='Date Created')
     last_updated = models.DateTimeField(verbose_name='Date Updated')
-    imglink = models.CharField(max_length=100)
     description = models.TextField(max_length=1000)
     project_link = models.CharField(max_length=100)
     tags = models.ManyToManyField(ProjectTags, blank=True, related_name='project_tag')
@@ -53,5 +48,3 @@ class Project(models.Model):
             self.created.strftime('%m-%d-%Y, %H:%M:%S'),
             self.last_updated.strftime('%m-%d-%Y, %H:%M:%S'),
             )
-    def get_img(self):
-        return static("img/projects/{}".format(self.imglink))

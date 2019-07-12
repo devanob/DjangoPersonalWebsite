@@ -1,14 +1,18 @@
 <!-- templates/signup.html -->
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block title %}Sign Up{% endblock %}
 
 {% comment %} Page Home Link  {% endcomment %}
 {% block navbrandLink %}
 {% url 'home' %}
 {% endblock %}
-{% block content %}
-{% load crispy_forms_tags %}
+
+
+
+
+
 {% block content %}
  <div class = "container-fluid text-center addCustom shadow p-3 mb-5 bg-white rounded">
   <h2>Sign up</h2>
