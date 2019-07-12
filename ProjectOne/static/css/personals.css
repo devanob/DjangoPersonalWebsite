@@ -135,3 +135,12 @@ hr.star-dark:after {
   color: #2C3E50;
   background-color: white;
 }
+
+footer{
+  padding: 5%;
+
+}
+
+footer ul > li > a{
+  color: rgb(24, 168, 187);
+}
