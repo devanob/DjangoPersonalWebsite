@@ -23,6 +23,7 @@ html5lib = "*"
 slimit = "*"
 brotli = "*"
 autopep8 = "*"
+wagtail = "*"
 
 [requires]
 python_version = "3.6"

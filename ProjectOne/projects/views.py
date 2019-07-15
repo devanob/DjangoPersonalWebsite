@@ -22,7 +22,7 @@ class ProjectView(View):
         try:# try to get the page if ther num is valid
             page = pagination_Pages.page(pageNum)
         except PageNotAnInteger:
-            page = pagination_Pages.page(1)
+            page = pagination_Pages.page(self.default_page)
         except EmptyPage:
             page = pagination_Pages.page(pagination_Pages.num_pages)
         pagination_context = {'current_page' : page}

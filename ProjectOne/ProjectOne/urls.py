@@ -30,14 +30,13 @@ from ProjectUser.urls import urlpatterns as ProjectUserURL
 #Organizer Urls
 urlpatterns = [
     path('personals-admin/', admin.site.urls),
-    path(r'', include( HomeURL) ),
     path(r'about/', include(aboutURL) ),
     path(r'projects/', include(projectsURL) ),
     path(r'contacts/', include(contactsURL) ),
     path(r'user/', include(ProjectUserURL)),
-    re_path(r'^cms/', include(wagtailadmin_urls)),
+    re_path(r'^cms-admin/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
-    re_path(r'^pages/', include(wagtail_urls)),
+    path(r'', include( HomeURL) ),
 ]
 from django.conf import settings
 

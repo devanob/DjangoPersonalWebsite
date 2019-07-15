@@ -1,0 +1,49 @@
+{% extends "blog/base_blog.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+{% block body_class %}template-rootpage{% endblock %}
+
+
+{% block title %}
+{{block.super}} {{ page.title}}
+{% endblock %}
+
+
+{% load staticfiles %}
+
+
+{% block extraJS %}
+{{ block.super }}
+{% endblock %}
+
+{% block customCSS %}
+{{ block.super }}
+<link href="{% static 'blog/css/blogHome.css' %}" rel="stylesheet">
+{% endblock %}
+   
+{% block content %}
+<header class = "imgHeader viewables">
+      <div class="header-wrapper">
+        <img class ="img-fluid" src="{% get_media_prefix %}{{page.blog_home_image}}">
+        <div class="overlay">
+            {{page.title}}
+        </div>
+      </div>
+      
+</header>
+<div class="container">
+    <div class="grid-container-categories">
+        <div class="grid-layout">
+            {% for category in categories %}
+                {% with category=category.specific %}
+                    <div class="item-grid">{{category.name}}</div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="row"> Pagination Here </div>
+</div>
+
+    <!-- /.container -->
+{% endblock %}
+

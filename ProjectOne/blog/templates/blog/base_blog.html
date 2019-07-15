@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+{% block body_class %}template-rootpage{% endblock %}
+
+
+#navigation up top override
+ {% block navBarlinks %}
+ {% endblock %}
+
+{% load staticfiles %}
+
+{% block navbrandLink %}
+{% url 'home' %}
+{% endblock %}
+
+{% block extraJS %}
+<script src="{% static 'js/time.js' %}"></script>
+{% endblock %}
+
+{% block customCSS %}
+{% endblock %}
+   
+

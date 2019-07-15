@@ -14,5 +14,36 @@
 <link href="{% static 'ProjectUser/css/authPage.css'%}" rel="stylesheet">
 {% endblock %}
    
-
-
+{% block navBarlinks %}
+            {% comment %} <li class="nav-item">
+              <a class="nav-link btn  js-scroll-trigger font-weight-bold" data-toggle="collapse" href="#aboutPage">About</a>
+            </li>
+            {% endcomment %}
+             <li class="nav-item">
+              <a class="nav-link btn font-weight-bold" href="{% url 'allProjects' pageNum=1 %}">Projects</a>
+            </li> 
+            {% comment %} <li class="nav-item">
+              <a class="nav-link btn font-weight-bold  js-scroll-trigger" href="#contactPage">
+              Contact</a>
+            </li> {% endcomment %}
+            {% if user.is_authenticated %}
+            <li class="logIn nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    Welcome {{user}}
+              </a>
+              
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuUser">
+                    <a class="dropdown-item " href="">Settings</a>
+                    <a class="dropdown-item " href="{% url 'logout'%}">SignOut</a>
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'login'%}">Login</a>
+            </li>
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'signup'%}">Signup</a>
+            </li>
+{% endif %}
+{% endblock %}

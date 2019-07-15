@@ -17,12 +17,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include, url
+from django.conf.urls import include, url, re_path
 from .views import HomePageView,HomePageViewExternel
+from wagtail.core import urls as wagtail_urls
 #Organizer Urls
 ##
 urlpatterns = [
     path(r'', HomePageView.as_view(), name = "home"),
+    re_path(r'pages/', include(wagtail_urls)),
+
 ]
 
 
