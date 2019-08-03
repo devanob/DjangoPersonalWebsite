@@ -1,0 +1,21 @@
+{% extends "blog/base_blog.html" %}
+{% load wagtailcore_tags %}
+{% load static %}
+{% block body_class %}template-rootpage{% endblock %}
+
+{% block title %}
+{% comment %} {{block.super}} {{ page.title}} {% endcomment %}
+{% endblock %}
+
+
+{% load staticfiles %}
+
+
+{% block extraJS %}
+{{ block.super }}
+{% endblock %}
+
+{% block customCSS %}
+{{ block.super }}
+<link href="{% static 'blog/css/blogHome.css' %}" rel="stylesheet">
+{% endblock %}

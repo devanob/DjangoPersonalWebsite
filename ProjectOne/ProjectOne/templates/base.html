@@ -1,0 +1,209 @@
+{% comment %} Load Tags  {% endcomment %}
+{% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A Personal Website To showcase My Projects, Hobbies , Blog , Demos From My Love Of Programming and Technology And History">
+    <meta name="author" content="Devano Brown">
+    <meta name="keywords" content="C++ Python Technology Software Developer 
+      OpenGl A.I Threads Operating System Devano Brown SMU Nova Scotia Halifax Canada Computer Science 
+      Computing Science Projects  C Javascript Blog Contact Bahamas Bahamamian Saint Marys University Mathematics
+      Software Engineer Computer Graphics
+      ">
+
+    <title>
+      {% block title %}
+      Devano's Personal-
+      {% endblock %}
+      {% load staticfiles %}
+    </title>
+    <!-- Bootstrap core CSS -->
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    {% compress css %}
+    <link rel="shortcut icon" href="{% static 'img/favicon/favicon.svg' %}"/>
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/personals.css' %}" rel="stylesheet">
+    <link href="{% static 'css/generalNavBar.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/buttonStyling.css' %}" rel="stylesheet">
+    {% endcompress %}
+    
+    {% block customCSS %}
+    <!-- //Custom CSS FOR APPS -->
+    {% endblock %}
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+
+    <nav id = 'navbarTop' class="navbar text-center justify-content-center fixed-top navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand  text-xl-left font-weight-bold js-scroll-trigger"
+             
+             href= 
+             {% block navbrandLink %}
+             "#page-top"
+             {% endblock %}
+             >
+            <img id= "Dbrand" src="{% static 'img/logo/naviconBrand.svg' %}" width="50" height="50" alt="">
+          Devano's Personal
+        </a> <!---Header Funciton-->
+        <button id= "buttonMenu" class="navbar-toggler navbar-toggler-right navbar-dark" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% block navBarlinks %}
+            <li class="nav-item">
+              <a class="nav-link btn  js-scroll-trigger font-weight-bold" data-toggle="collapse" href="#aboutPage">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    Projects
+                  </a>
+              
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item js-scroll-trigger" href="#projectSection">Quick Look(Latest)</a>
+                    <a class="dropdown-item " href="{% url 'allProjects' pageNum=1 %}">All Projects</a>
+                </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn font-weight-bold  js-scroll-trigger" href="#contactPage">
+              Contact</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li class="logIn nav-item dropdown">
+              <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="dropdownMenuUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                    Welcome {{user}}
+              </a>
+              
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuUser">
+                    <a class="dropdown-item " href="">Settings</a>
+                    <a class="dropdown-item " href="{% url 'logout'%}">SignOut</a>
+                </div>
+            </li>
+            {% else %}
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'login'%}">Login</a>
+            </li>
+            <li class="nav-item logIn">
+              <a class="nav-link btn font-weight-bold" href="{% url 'signup'%}">Signup</a>
+            </li>
+            {% endif %}
+           
+           
+            {% comment %} 
+              <li class="nav-item dropdown"> <!--Blog Header Here-->
+                <a class="nav-link dropdown-toggle btn font-weight-bold" href="#" id="navbarDropdownBlog" 
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Blog
+                </a>
+                <div class="dropdown-menu dropdown-menu-right " aria-labelledby="navbarDropdownBlog">
+                  <a class="dropdown-item" href="">Tech Blog</a>
+                  <a class="dropdown-item" href="">CS Blog</a>
+                </div>
+              </li> 
+            {% endcomment %}
+            
+           
+          </ul>
+          {% endblock %}
+        
+        </div>
+        
+      </div>
+    </nav>
+
+    {% block header %}
+        
+    {% endblock %}
+
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+  <footer>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center footer">
+          
+          <li class="list-inline-item">
+            <a href="browndevano@gmailcom">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/devano-brown-806116111/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li> 
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/devano.brown?ref=bookmarks">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/devanob">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Devano Brown Powered By Django/Django Rest And Google Cloud</p>
+      </div>
+    </div>
+  </div>
+</footer>
+    <!-- /.container -->
+
+  
+    <!-- Bootstrap core JavaScript CustomScripts -->
+    {% compress js %}
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'vendor/boostrap_select/js/bootstrap-select.min.js' %}"></script>
+    {% endcompress js %}
+    
+    {% block extraJS %}
+    <!-- Extra Js Scripts -->
+    {% endblock %}
+   
+
+
+  </body>
+
+</html>

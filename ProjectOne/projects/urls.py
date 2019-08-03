@@ -18,13 +18,12 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include, url
 from projects.views import ProjectView, BaseRedirect,SearchProjects
-from .views import ProjectsViewSet, ProjectsViewSetPaginated
+from .views import ProjectsViewSetPaginated
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'projects-count/page-count=(?P<page_count>\d+)', ProjectsViewSetPaginated, basename='projects-count')
-router.register(r'allprojects', ProjectsViewSet, basename='projects')
-router.register(r'paginated-projects', ProjectsViewSetPaginated, basename='projects-pagination')
+router.register(r'projects', ProjectsViewSetPaginated, basename='list-projects')
+
 
 
 urlpatterns = [

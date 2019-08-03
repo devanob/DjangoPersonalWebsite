@@ -1,7 +1,10 @@
 {% extends "base.html" %}
+
 {% load wagtailcore_tags %}
+{% load static wagtailuserbar %}
 {% block body_class %}template-rootpage{% endblock %}
 
+{% comment %} {% load static wagtailuserbar %} {% endcomment %}
 
 #navigation up top override
  {% block navBarlinks %}
@@ -16,6 +19,11 @@
 {% block extraJS %}
 <script src="{% static 'js/time.js' %}"></script>
 {% endblock %}
+
+{% block wagtailblock %}
+{% wagtailuserbar %}
+{% endblock %}
+
 
 {% block customCSS %}
 {% endblock %}

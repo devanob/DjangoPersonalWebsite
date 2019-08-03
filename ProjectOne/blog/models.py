@@ -30,7 +30,7 @@ class BlogPage(Page):
 
 #Represent A Blog Image
 class BlogImages(Orderable):
-    page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='gallery_images')
+    page = ParentalKey(BlogPage, on_delete=models.CASCADE, related_name='gallery_images', blank=True)
     image = models.ForeignKey('wagtailimages.Image', on_delete=models.CASCADE, related_name='+')
     caption = models.CharField(blank=True, max_length=250)
     panels = [

@@ -15,7 +15,9 @@ import os
 with open('/home/devano/PythonDjango/MainSiteSettings/appSetting.json') as json_setting:  
     SETTINGS_JSON = json.load(json_setting)
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(PROJECT_DIR)
+print(BASE_DIR)
 
 
 
@@ -35,9 +37,15 @@ CELERY_BROKER_URL = SETTINGS_JSON['CELERY_BROKER_URL']
 # Application definition
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
 #MEDIA URL AND ROOT
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = os.path.join(PROJECT_DIR , "media")
 MEDIA_URL = 'https://devanobrown.tech/media/'
 
+#staticApp
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
 
 #email Setttings 
@@ -95,16 +103,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'ProjectOne.urls'
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True 
 SECURE_HSTS_SECONDS = 360
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [os.path.join(PROJECT_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -141,8 +150,9 @@ DATABASES = {
 
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(PROJECT_DIR, 'static'),
 ]
+
 
 
 # Password validation
@@ -184,7 +194,7 @@ USE_TZ = True
 ##
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticFile/')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'staticFile/')
 import logging 
 
 ##User Authentication 
@@ -203,14 +213,6 @@ LOGGING = {
         'null': {
             'level':'DEBUG',
             'class':'logging.NullHandler',
-        },
-        'logfile': {
-            'level':'INFO',
-            'class':'logging.handlers.RotatingFileHandler',
-            'filename': BASE_DIR + "/logfile.txt",
-            'maxBytes': 50000,
-            'backupCount': 2,
-            'formatter': 'standard',
         },
         'console':{
             'level':'INFO',
@@ -256,12 +258,7 @@ LOGGING = {
     }
 }
 
-#staticApp
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder',
-)
+
 
 PASSWORD_HASHERS = (
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',

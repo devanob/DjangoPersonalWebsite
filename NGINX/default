@@ -37,16 +37,16 @@ server {
     server_name  35.243.251.42 https://devanobrown.tech/ wwww.devano.tech;
     server_tokens on;
     location /static {
-        alias /home/devano/PythonDjango/MainSite/ProjectOne/staticFile ;
+        alias /home/devano/Dir/Dir/ProjectOne/staticFile ;
     }
     location /media {
-        alias /home/devano/PythonDjango/MainSite/ProjectOne/media ;
+        alias  /home/devano/Dir/Dir/ProjectOne/media ;
     }
     location / {
         proxy_set_header   X-Forwarded-For $remote_addr;
         proxy_set_header   Host $http_host;
         # socket implementation for better reponse
-        proxy_pass         http://unix:/home/devano/PythonDjango/MainSite/ProjectOne/ProjectOne.sock ;
+        proxy_pass         http://unix:/home/devano/Dir/Dir/ProjectOne/ProjectOne.sock ;
     }
 
     proxy_read_timeout  1200s;

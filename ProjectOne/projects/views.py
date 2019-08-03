@@ -83,31 +83,14 @@ from rest_framework.pagination import PageNumberPagination
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 5
     page_size_query_param = 'page_size'
-    max_page_size = 5
+    max_page_size = 1000
 ##API REST PROJECTS
-
-class ProjectsViewSet(viewsets.ViewSet):
-    """
-    A simple ViewSet for listing or retrieving projects.
-    """
-    def list(self, request):
-        queryset = Project.objects.all()
-        serializer = ProjectSerializer(queryset, many=True)
-        print(serializer.data)
-        return Response(serializer.data)
-
 class ProjectsViewSetPaginated(mixins.ListModelMixin, viewsets.GenericViewSet):
     """
     A simple ViewSet for listing or retrieving projects.
     """
     pagination_class = StandardResultsSetPagination
-
-    def get_queryset(self):
-        if ('page_count' in self.kwargs):
-            page_size = int(self.kwargs['page_count'])
-            self.pagination_class = None
-            return Project.objects.all()[:page_size]
-        return Project.objects.all()
-
     serializer_class = ProjectSerializer
+    queryset =Project.objects.all()
+    
 

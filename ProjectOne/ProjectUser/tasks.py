@@ -41,6 +41,7 @@ def sendActivationEmail(sign_up_data):
                       [sign_up_data["email"]],
                       html_message=message,
                       fail_silently=False)
+    log.info(sign_up_data)
     if status:
         log.info("Activation Email Send For {}".format(sign_up_data['username']))
     else:

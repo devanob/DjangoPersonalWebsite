@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<section class = "sectionPage  mb-0" id = "projectSection">
+        <div class="container-fluid">
+            <h1 class="text-center text-uppercase ">Latest Projects</h1>
+            <hr class="star-dark mb-5">
+            {% comment %} <h3 class="text-center text-uppercase ">Personal's Latest Projects</h3> {% endcomment %}
+            <div class="row center justify-content-center">
+                <a class="btn  btn btn-outline-info btn-lg" href="{% url 'allProjects' pageNum=1 %}">More Projects
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <div class="row">        
+                  {% for project in Projects %}
+                    <div class="col-lg-4 customCol">
+                      <div class="card text-center">
+                        <div class="card-top">
+                          <a href="{{ project.project_link }}">
+                            <img class="card-img-top" 
+                            {% if project.project_image %}
+                              src="{{project.project_image.url}}"
+                            {% endif %}
+                            alt="">
+                          </a>
+                        </div>
+                        <div class="card-body">
+                          <div class="innerBody">
+                            <h2 class="card-title">
+                            <a href="{{ project.project_link }}" >{{project.projectName}} </a>
+                            </h2>
+                            <p class="card-text"?> {{ project.description }}</p>
+                            <p class="card-text"?><time class = "timeLocal"> {{ project.last_updated|date:"c" }}</time></p>
+                            <a class="btn btn-outline-primary" href="{{ project.project_link }}">Github</a>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    
+                    </div>
+                  {% endfor %}
+            </div>
+            
+              
+              <!-- Go To The First Page Of All Projects -->
+             
+        </div>
+</section>

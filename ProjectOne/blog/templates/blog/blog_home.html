@@ -3,7 +3,6 @@
 {% load static %}
 {% block body_class %}template-rootpage{% endblock %}
 
-
 {% block title %}
 {{block.super}} {{ page.title}}
 {% endblock %}
@@ -28,16 +27,21 @@
         <div class="overlay">
             {{page.title}}
         </div>
-      </div>
-      
+      </div>   
 </header>
 <div class="container">
     <div class="grid-container-categories">
         <div class="grid-layout">
+        
             {% for category in categories %}
                 {% with category=category.specific %}
-                    <div class="item-grid">{{category.name}}</div>
-                {% endwith %}
+                <a class="item-grid" href="{% pageurl category  %}" style="background-image: linear-gradient(to right, white, {{category.colour}} );">
+                    
+                        
+                            <div>{{category.name}}</div>
+                   
+                 </a>
+                 {% endwith %}
             {% endfor %}
         </div>
     </div>

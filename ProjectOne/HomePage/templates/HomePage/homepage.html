@@ -10,6 +10,7 @@
 <link href="{% static 'about/css/about.css' %}" rel="stylesheet">
 {% endcompress %}
 <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 {% endblock %}
 
 {% block title %}
@@ -24,6 +25,10 @@
 <script src="{% static 'js/carousel.js' %}"></script>
 <script src="{% static 'about/js/about.js' %}"></script>
 {% endcompress js %}
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 {% endblock %}
 
 
