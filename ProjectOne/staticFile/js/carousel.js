@@ -39,6 +39,7 @@ function truncate(input, maxlength) {
  };
 //inserts each project to html element to be added to the homepage
 let porjectInsert =(projectArray) =>{
+    console.log(projectArray);
     projectArray = projectArray.results.filter((element)=>{
         if (element.project_image != null){
             return true;
@@ -104,7 +105,7 @@ let porjectInsert =(projectArray) =>{
 }
 document.addEventListener("DOMContentLoaded", ()=>{
 
-    let httpURl = "/projects/api-projects/projects/?page_size=10/"
+    let httpURl = "/projects/api-projects/projects/?page_size=10"
     fetchHTTP(httpURl).then((data)=>{
         porjectInsert(data);
     }).catch(error=>{
@@ -112,3 +113,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
     })
 })
 
+console.log("Testing Compression3");

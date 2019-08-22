@@ -7,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="A Personal Website To showcase My Projects, Hobbies , Blog , Demos From My Love Of Programming and Technology And History">
+    <meta name="description" content="{% block seo-description %}A Personal Website To showcase My Projects, Hobbies , Blog , Demos From My Love Of Programming and Technology And History{% endblock %}">
     <meta name="author" content="Devano Brown">
     <meta name="keywords" content="C++ Python Technology Software Developer 
       OpenGl A.I Threads Operating System Devano Brown SMU Nova Scotia Halifax Canada Computer Science 
@@ -34,6 +34,7 @@
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/buttonStyling.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animationFix.css' %}" rel="stylesheet">
     {% endcompress %}
     
     {% block customCSS %}
@@ -201,6 +202,7 @@
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
     <script src="{% static 'vendor/boostrap_select/js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/animationFix.js' %}"></script>
     {% endcompress js %}
     
     {% block extraJS %}

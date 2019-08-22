@@ -19,7 +19,10 @@
 {{ block.super }}
 <link href="{% static 'blog/css/blogHome.css' %}" rel="stylesheet">
 {% endblock %}
-   
+
+{% block seo-description %}
+{{self.search_description}}
+{% endblock %}
 {% block content %}
 <header class = "imgHeader viewables">
       <div class="header-wrapper">

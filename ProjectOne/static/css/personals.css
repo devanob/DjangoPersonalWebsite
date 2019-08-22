@@ -144,3 +144,7 @@ footer{
 footer ul > li > a{
   color: rgb(24, 168, 187);
 }
+
+footer ul > li > a:hover {
+  color: black;
+}

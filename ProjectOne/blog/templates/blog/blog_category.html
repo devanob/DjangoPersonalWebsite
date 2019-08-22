@@ -17,5 +17,76 @@
 
 {% block customCSS %}
 {{ block.super }}
-<link href="{% static 'blog/css/blogHome.css' %}" rel="stylesheet">
+<link href="{% static 'blog/css/blogHome.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/addBodyPadding.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+<!---Main Content-Body-->
+{% block content %}
+<div class="container">
+    <div class=row> 
+        <div class="col-lg-8">
+
+        
+
+        <!-- Category Post List -->
+        
+
+        {{ blogpages.count }}        
+        {% if blogpages is not None %}
+          {% for post  in blogpages %}
+        
+          
+           {% with post=post.specific %}
+            <article class="post-preview">
+              <a href="{% pageurl post  %}">
+                <h2 class="post-title">{{post.title}}</h2>
+                
+                <h3 class="post-subtitle">{{ post.description  }}</h3>
+                
+              </a>
+              <p class="post-meta">Posted by
+                
+                Start Bootstrap
+                
+                on
+                October 31, 2017 · <span class="reading-time" title="Estimated read time">4 mins  read </span>
+                
+              </p>
+            </article>
+          <hr>
+        {% endwith %}
+          
+        {% endfor %}
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="/startbootstrap-clean-blog-jekyll/posts">View All Posts →</a>
+        </div>
+        {% else %}
+        <div>No Post Yet In This Section. Check Back Later</div>
+        {% endif %}
+        <!-- Pager -->
+        
+
+      </div>
+      <div class="col-md-4">SideBar</div>
+    </div>
+<ul class="pagination">
+    {% if blogpages.has_previous %}
+      <li>
+        <a href="?page={{ blogpages.previous_page_number }}"><i class="fa fa-angle-left"></i></a>
+      </li>
+    {% endif %}
+    {% for page_num in blogpages.paginator.page_range %}
+      <li {% if page_num == blogpages.number %} class="active"{% endif %}>
+        <a href="?page={{ page_num }}">{{ page_num }}</a>
+      </li>
+    {% endfor %}
+    {% if resources.has_next %}
+      <li>
+        <a href="?page={{ blogpages.next_page_number }}"><i class="fa fa-angle-right"></i></a>
+      </li>
+      {% endif %}
+  </ul>
+</div>
 {% endblock %}

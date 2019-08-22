@@ -27,6 +27,9 @@ from projects.urls import urlpatterns as projectsURL
 from contact.urls import urlpatterns as contactsURL
 from ProjectUser.urls import urlpatterns as ProjectUserURL
 
+
+
+
 #Organizer Urls
 urlpatterns = [
     path('personals-admin/', admin.site.urls),

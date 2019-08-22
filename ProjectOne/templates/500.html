@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{block.super}} Personal's 405 Error
+{% endblock %}
+
+{% load staticfiles %}
+
+{% block navbrandLink %}
+{% url 'home' %}
+{% endblock %}
+
+{% block extraJS %}
+{% endblock %}
+
+{% block customCSS %}
+<link href="{% static 'css/addBodyPadding.css' %}" rel="stylesheet">
+{% endblock %}
+   
+{% block content %}
+Seems Our Servers Are A Bit Tired, Try Again Later :(
+{% endblock %}
+

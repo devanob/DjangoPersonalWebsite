@@ -79,6 +79,8 @@ from rest_framework import mixins
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.pagination import PageNumberPagination
+from rest_framework import permissions
+
 
 class StandardResultsSetPagination(PageNumberPagination):
     page_size = 5
@@ -89,6 +91,7 @@ class ProjectsViewSetPaginated(mixins.ListModelMixin, viewsets.GenericViewSet):
     """
     A simple ViewSet for listing or retrieving projects.
     """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     pagination_class = StandardResultsSetPagination
     serializer_class = ProjectSerializer
     queryset =Project.objects.all()

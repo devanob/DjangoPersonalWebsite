@@ -34,6 +34,7 @@
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'vendor/boostrap_select/css/bootstrap-select.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/buttonStyling.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animationFix.css' %}" rel="stylesheet">
     {% endcompress %}
     
     {% block customCSS %}
@@ -195,9 +196,10 @@
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/navbar.js' %}"></script>
+    <script src="{% static 'js/animationFix.js' %}"></script>
     <script src="{% static 'vendor/boostrap_select/js/bootstrap-select.min.js' %}"></script>
     {% endcompress js %}
-    
+    {% comment %} <script src="{% static 'js/animationFix.js' %}"></script> {% endcomment %}
     {% block extraJS %}
     <!-- Extra Js Scripts -->
     {% endblock %}
