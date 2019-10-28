@@ -24,6 +24,7 @@ slimit = "*"
 brotli = "*"
 autopep8 = "*"
 wagtail = "*"
+channels = "*"
 
 [requires]
 python_version = "3.6"
